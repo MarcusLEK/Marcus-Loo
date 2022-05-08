@@ -12,9 +12,9 @@
           <div class="grid grid-cols-3">
             <span class="col-span-12 mb-5 text-5xl text-white font-bold">Hello, I'm <span class="text-goGreen ml-2">Marcus Loo</span>.</span>
             <span class="col-span-12 mb-5 text-5xl text-white font-bold">Web Developer and Tech Enthusiast</span>
-            <div class="col-span-12 md:col-span-1 text-xl text-center text-white border-2 rounded-full p-5 cursor-pointer hover:border-goGreen transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-goGreen duration-300">
+            <a href="https://drive.google.com/file/d/1yYHxsNtZJ4dXXBq1K9iRKLL6rCe66syB/view?usp=sharing" target="_blank" class="col-span-12 md:col-span-1 text-xl text-center text-white border-2 rounded-full p-5 cursor-pointer hover:border-goGreen transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-goGreen duration-300">
               Download CV
-            </div>
+            </a>
           </div>
         </div>
         <div class="snap-center h-screen flex items-center justify-center">
@@ -113,6 +113,13 @@
                       PHP
                     </span>
                     <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                      HTML
+                    </span>
+                    <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                      CSS
+                    </span>
+                    
+                    <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
                       JAVASCRIPT
                     </span>
                     <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
@@ -126,6 +133,9 @@
                     </span>
                     <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
                       PYTHON
+                    </span>
+                    <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                      JAVA
                     </span>
                     <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
                       BASH
@@ -170,9 +180,9 @@
                   </svg>
                   <span class="inline text-white text-xl my-auto ml-5">Marcuslooek@gmail.com</span>
                 </div>
-                <div class="text-xl text-center text-white border-2 rounded-full p-5 cursor-pointer hover:border-goGreen transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-goGreen duration-300">
+                <a href="https://drive.google.com/file/d/1yYHxsNtZJ4dXXBq1K9iRKLL6rCe66syB/view?usp=sharing" target="_blank" class="text-xl text-center text-white border-2 rounded-full p-5 cursor-pointer hover:border-goGreen transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-goGreen duration-300">
                   Download CV
-                </div>
+                </a>
               </div>
             </div>
           </div>
