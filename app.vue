@@ -11,7 +11,7 @@
         <div class="grid grid-cols-3">
           <span class="col-span-12 mb-5 text-5xl text-white font-bold">Hello, I'm <span class="text-goGreen md:ml-2">Marcus Loo</span>.</span>
           <span class="col-span-12 mb-5 text-5xl text-white font-bold">Web Developer and Tech Enthusiast</span>
-          <a href="https://drive.google.com/file/d/1yYHxsNtZJ4dXXBq1K9iRKLL6rCe66syB/view?usp=sharing" target="_blank" class="col-span-12 md:col-span-1 text-xl text-center text-white border-2 rounded-full p-5 cursor-pointer hover:border-goGreen transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-goGreen duration-300">
+          <a href="https://drive.google.com/file/d/1yYHxsNtZJ4dXXBq1K9iRKLL6rCe66syB/view?usp=sharing" target="_blank" class="col-span-12 md:col-span-1 text-xl text-center text-white font-semibold border-2 rounded-full p-5 cursor-pointer hover:border-goGreen transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-goGreen duration-300">
             Download CV
           </a>
         </div>
@@ -45,17 +45,17 @@
                 <div class="text-3xl mb-5">VE Capital Pte. Ltd. - Laravel Developer</div>
                 <div class="block ml-5 mb-10">
                   <ul class="list-disc">
-                    <li>Actively involve in the planning of the project from the sprint planning phase until the deployment phase</li>
-                    <li>Maintain, improve and debug existing application built by the company</li>
-                    <li>Review and merge PR requests</li>
+                    <li class="mb-2">Actively involve in the planning of the project from the sprint planning phase until the deployment phase</li>
+                    <li class="mb-2">Maintain, improve and debug existing application built by the company</li>
+                    <li class="mb-2">Review and merge PR requests</li>
                   </ul>
                 </div>
 
                 <div class="text-3xl mb-3">Achievements</div>
                 <div class="block ml-5">
                   <ul class="list-disc">
-                    <li>Successfully encourage the company to implement scrum</li>
-                    <li>Implemented proper mobile app architecture using GetX</li>
+                    <li class="mb-2">Successfully encourage the company to implement scrum</li>
+                    <li class="mb-2">Implemented proper mobile app architecture using GetX</li>
                   </ul>
                 </div>
               </div>
@@ -72,15 +72,15 @@
             </div>
             <div class="grid grid-cols-12">
               <div class="border-l w-1 ml-5 md:ml-7"></div>
-              <div class="col-start-3 col-span-full p-4 text-white text-xl my-auto mb-10">
+              <div class="col-start-3 col-span-full p-4 text-white text-xl my-auto">
                 <div class="text-3xl mb-5">Hiredly (formerly known as WOBB) - Intern Developer</div>
-                <div class="block ml-5 mb-5">
+                <div class="block ml-5">
                   <ul class="list-disc">
-                    <li>Maintenance of WOBB mobile app on Android and IOS</li>
-                    <li>Implementation of new features for mobile app</li>
-                    <li>Creating and deploying mobile app APK for internal Alpha testing</li>
-                    <li>Managing and integrating of Google/Facebook analytics</li>
-                    <li>Manage and review resumes/cv for QC</li>
+                    <li class="mb-2">Maintenance of WOBB mobile app on Android and IOS</li>
+                    <li class="mb-2">Implementation of new features for mobile app</li>
+                    <li class="mb-2">Creating and deploying mobile app APK for internal Alpha testing</li>
+                    <li class="mb-2">Managing and integrating of Google/Facebook analytics</li>
+                    <li class="mb-2">Manage and review resumes/cv for QC</li>
                   </ul>
                 </div>
               </div>
@@ -89,73 +89,70 @@
         </div>
       </div>
       
-      <div class="flex items-center justify-center">
+      <div class="min-h-screen flex items-center justify-center">
         <div>
           <span class="text-white text-4xl md:text-5xl font-bold flex justify-center mb-5">MY <span class="text-goGreen ml-2">SKILLS</span></span>
-          <div class="grid grid-rows-2">
-            <div class="mb-10">
-              <span class="text-white text-4xl font-bold flex justify-center mb-3">Frameworks</span>
-                <div class="flex items-center justify-center flex-wrap gap-3">
-                  <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
-                    LARAVEL
-                  </span>
-                  <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
-                    VUE
-                  </span>
-                  <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
-                    FLUTTER
-                  </span>
-              </div>
+          <div class="mb-10">
+            <span class="text-white text-3xl md:text-4xl font-bold flex justify-center mb-3">Frameworks</span>
+            <div class="flex items-center justify-center flex-wrap gap-3">
+              <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                LARAVEL
+              </span>
+              <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                VUE
+              </span>
+              <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                FLUTTER
+              </span>
             </div>
-            <div class="mb-10">
-              <span class="text-white text-4xl font-bold flex justify-center mb-3">Languages</span>
-                <div class="flex items-center justify-center flex-wrap gap-3">
-                  <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
-                    PHP
-                  </span>
-                  <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
-                    HTML
-                  </span>
-                  <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
-                    CSS
-                  </span>
-                  
-                  <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
-                    JAVASCRIPT
-                  </span>
-                  <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
-                    SQL
-                  </span>
-                  <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
-                    DART
-                  </span>
-                  <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
-                    C++
-                  </span>
-                  <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
-                    PYTHON
-                  </span>
-                  <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
-                    JAVA
-                  </span>
-                  <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
-                    BASH
-                  </span>
-              </div>
+          </div>
+          <div class="mb-10">
+            <span class="text-white text-3xl md:text-4xl font-bold flex justify-center mb-3">Languages</span>
+            <div class="flex items-center justify-center flex-wrap gap-3">
+              <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                PHP
+              </span>
+              <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                HTML
+              </span>
+              <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                CSS
+              </span>
+              <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                JAVASCRIPT
+              </span>
+              <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                SQL
+              </span>
+              <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                DART
+              </span>
+              <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                C++
+              </span>
+              <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                PYTHON
+              </span>
+              <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                JAVA
+              </span>
+              <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                BASH
+              </span>
             </div>
-            <div class="mb-10">
-              <span class="text-white text-4xl font-bold flex justify-center mb-3">Others</span>
-              <div class="flex items-center justify-center flex-wrap gap-3">
-                <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
-                  LINUX
-                </span>
-                <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
-                  DOCKER
-                </span>
-                <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
-                  MOBILE DEVELOPMENT
-                </span>
-              </div>
+          </div>
+          <div class="mb-10">
+            <span class="text-white text-3xl md:text-4xl font-bold flex justify-center mb-3">Others</span>
+            <div class="flex items-center justify-center flex-wrap gap-3">
+              <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                LINUX
+              </span>
+              <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                DOCKER
+              </span>
+              <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                MOBILE DEVELOPMENT
+              </span>
             </div>
           </div>
         </div>
@@ -181,13 +178,13 @@
                 </svg>
                 <span class="inline text-white text-xl my-auto ml-5">Marcuslooek@gmail.com</span>
               </div>
-              <a href="linkedin.com/in/marcus-loo/" class="mb-3">
+              <a href="https://www.linkedin.com/in/marcus-loo/" class="mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white inline" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
                 </svg>
                 <span class="inline text-white text-xl my-auto ml-5">linkedin.com/in/marcus-loo/</span>
               </a>
-              <a href="https://drive.google.com/file/d/1yYHxsNtZJ4dXXBq1K9iRKLL6rCe66syB/view?usp=sharing" target="_blank" class="text-xl text-center text-white border-2 rounded-full p-5 cursor-pointer hover:border-goGreen transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-goGreen duration-300">
+              <a href="https://drive.google.com/file/d/1yYHxsNtZJ4dXXBq1K9iRKLL6rCe66syB/view?usp=sharing" target="_blank" class="text-xl text-center text-white font-semibold border-2 rounded-full p-5 cursor-pointer hover:border-goGreen transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-goGreen duration-300">
                 Download CV
               </a>
             </div>
