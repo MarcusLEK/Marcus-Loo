@@ -17,6 +17,7 @@
             </a>
           </div>
         </div>
+        
         <div class="snap-center h-screen flex items-center justify-center">
           <div>
             <span class="text-white text-5xl font-bold flex justify-center mb-5">ABOUT <span class="text-goGreen ml-2">ME</span></span>
@@ -26,6 +27,7 @@
             </div>
           </div>
         </div>
+
         <div class="snap-center flex justify-center">
            <div id="contactme">
             <span class="text-white text-5xl font-bold flex justify-center mb-5">MY <span class="text-goGreen ml-2">EXPERIENCES</span></span>
