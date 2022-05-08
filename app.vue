@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcus</title>
+    <title>Marcus Loo - Web Portfolio</title>
   </head>
   <body class="bg-raisinBlack">
     <!-- <div class="snap-y snap-mandatory h-screen overflow-scroll scroll-smooth"> -->
