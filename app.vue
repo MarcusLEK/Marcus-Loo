@@ -20,7 +20,7 @@
       <div class="h-screen flex items-center justify-center">
         <div>
           <span class="text-white text-4xl md:text-5xl font-bold flex justify-center mb-5">ABOUT <span class="text-goGreen ml-2">ME</span></span>
-          <div class="text-white text-xl">
+          <div class="container text-white text-xl">
             Technology has been a huge passion of mine especially being able to learn and use tech in different ways imaginable.
             I am able to multi task as well as highly open to learning new things even if its not related to my field. I strongly believe in work culture and team work. I always believe that in tech it is a never ending journey of growth and progress.
           </div>
@@ -28,14 +28,14 @@
       </div>
 
       <div class="md:flex md:items-center md:justify-center">
-          <div id="contactme">
+        <div id="contactme">
           <span class="text-white text-4xl md:text-5xl font-bold flex justify-center mb-5">MY <span class="text-goGreen ml-2">EXPERIENCES</span></span>
           <div class="grid grid-row-2">
             <div class="grid grid-cols-12">
               <svg xmlns="http://www.w3.org/2000/svg" class="col-span-1 h-10 w-10 md:col-span-2 md:h-14 md:w-14 text-white bg-goGreen rounded-full p-2 my-auto" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
               </svg>
-              <div class="col-start-3 col-span-full md:col-span-2 bg-gray-700 rounded-full p-2 md:p-4 text-white text-center my-auto">
+              <div class="col-start-3 col-span-full md:col-span-4 bg-gray-700 rounded-full p-2 md:p-4 text-white text-center my-auto">
                 <span>Oct 2020 - PRESENT</span>
               </div>
             </div>
@@ -55,7 +55,7 @@
                 <div class="block ml-5">
                   <ul class="list-disc">
                     <li class="mb-2">Successfully encourage the company to implement scrum</li>
-                    <li class="mb-2">Implemented proper mobile app architecture using GetX</li>
+                    <li class="mb-2">Implemented mobile app architecture using GetX</li>
                   </ul>
                 </div>
               </div>
@@ -66,7 +66,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" class="col-span-1 h-10 w-10 md:col-span-2 md:h-14 md:w-14 text-white bg-goGreen rounded-full p-2 my-auto" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
               </svg>
-              <div class="col-start-3 col-span-full md:col-span-2 bg-gray-700 rounded-full p-2 md:p-4 text-white text-center my-auto">
+              <div class="col-start-3 col-span-full md:col-span-4 bg-gray-700 rounded-full p-2 md:p-4 text-white text-center my-auto">
                 <span>Mar 2020 - Jun 2020</span>
               </div>
             </div>
@@ -88,6 +88,21 @@
           </div>
         </div>
       </div>
+
+      <div class="min-h-screen flex items-center justify-center">
+        <div id="myworks">
+          <span class="text-white text-4xl md:text-5xl font-bold flex justify-center mb-5">MY <span class="text-goGreen ml-2">WORKS</span></span>
+          <div class="grid grid-cols-12 gap-2 md:gap-5 items-center">
+            <div class="h-60 col-span-12 md:col-span-6 text-center rounded-lg overflow-hidden w-50 md:w-96 mx-auto bg-white grid grid-cols-2">
+              <img class="col-span-12 object-cover w-full p-5" src="/images/condomanagement.jpg" alt="">
+              <span class="col-span-12 font-semibold px-5 pb-5">Condo Management System</span>
+            </div>
+            <a href="https://github.com/MarcusLEK" class="h-60 w-full col-span-12 md:col-span-6 items-center justify-center rounded-lg overflow-hidden w-50 md:w-96 mx-auto bg-white grid grid-cols-2 text-gray-400 hover:text-goGreen transition ease-in-out delay-150 duration-300">
+              <span class="col-span-12 text-3xl font-semibold px-5 text-center">See More</span>
+            </a>
+          </div>
+        </div>
+      </div>
       
       <div class="min-h-screen flex items-center justify-center">
         <div>
@@ -103,6 +118,12 @@
               </span>
               <span class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
                 FLUTTER
+              </span>
+              <span class="relative inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none">
+                <span>React</span>
+                <span class="flex absolute h-1/2 w-full -top-2 -right-6">
+                  <span class="absolute inline-flex h-full w-full rounded-md bg-yellow-500 items-center justify-center">Learning</span>
+                </span>
               </span>
             </div>
           </div>
@@ -157,6 +178,7 @@
           </div>
         </div>
       </div>
+
       <div class="h-screen flex items-center justify-center">
         <div id="contactme">
           <span class="text-white text-4xl md:text-5xl font-bold flex justify-center mb-5">Contact <span class="text-goGreen ml-2">Me</span></span>
