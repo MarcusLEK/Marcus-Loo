@@ -130,10 +130,6 @@
         <div id="myworks">
           <span class="text-white text-4xl md:text-5xl font-bold flex justify-center mb-5">MY <span class="text-goGreen ml-2">WORKS</span></span>
           <div class="grid grid-cols-12 gap-2 md:gap-5 items-center">
-            <div class="h-60 col-span-12 md:col-span-6 text-center rounded-lg overflow-hidden w-50 md:w-96 mx-auto bg-white grid grid-cols-2">
-              <img class="col-span-12 object-cover w-full p-5" src="/images/condomanagement.jpg" alt="">
-              <span class="col-span-12 font-semibold px-5 pb-5">Condo Management System</span>
-            </div>
             <a href="https://github.com/MarcusLEK" class="h-60 w-full col-span-12 md:col-span-6 items-center justify-center rounded-lg overflow-hidden w-50 md:w-96 mx-auto bg-white grid grid-cols-2 text-gray-400 hover:text-goGreen transition ease-in-out delay-150 duration-300">
               <span class="col-span-12 text-3xl font-semibold px-5 text-center">See More</span>
             </a>
