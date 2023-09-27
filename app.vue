@@ -126,7 +126,7 @@
         </div>
       </div>
 
-      <div class="min-h-screen flex items-center justify-center">
+      <!-- <div class="min-h-screen flex items-center justify-center">
         <div id="myworks">
           <span class="text-white text-4xl md:text-5xl font-bold flex justify-center mb-5">MY <span class="text-goGreen ml-2">WORKS</span></span>
           <div class="grid grid-cols-12 gap-2 md:gap-5 items-center">
@@ -135,7 +135,7 @@
             </a>
           </div>
         </div>
-      </div>
+      </div> -->
       
       <div class="min-h-screen flex items-center justify-center">
         <div>
