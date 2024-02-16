@@ -1,6 +1,6 @@
 <template>
 	<div class="h-screen flex items-center justify-center">
-		<div id="contactme">
+		<div id="contactme" class="p-10">
 			<span
 				class="text-white text-4xl md:text-5xl font-bold flex justify-center mb-5"
 				>Contact <span class="text-goGreen ml-2">Me</span></span

@@ -1,15 +1,11 @@
 <template>
 	<div class="min-h-screen flex items-center justify-center">
-		<div>
+		<div class="p-10">
 			<span
 				class="text-white text-4xl md:text-5xl font-bold flex justify-center mb-5"
 				>MY <span class="text-goGreen ml-2">SKILLS</span></span
 			>
 			<div class="mb-10">
-				<span
-					class="text-white text-3xl md:text-4xl font-bold flex justify-center mb-3"
-					>Frameworks</span
-				>
 				<div class="flex items-center justify-center flex-wrap gap-3">
 					<span
 						class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none"
@@ -34,10 +30,6 @@
 				</div>
 			</div>
 			<div class="mb-10">
-				<span
-					class="text-white text-3xl md:text-4xl font-bold flex justify-center mb-3"
-					>Languages</span
-				>
 				<div class="flex items-center justify-center flex-wrap gap-3">
 					<span
 						class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none"
@@ -82,20 +74,11 @@
 					<span
 						class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none"
 					>
-						JAVA
-					</span>
-					<span
-						class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none"
-					>
 						BASH
 					</span>
 				</div>
 			</div>
 			<div class="mb-10">
-				<span
-					class="text-white text-3xl md:text-4xl font-bold flex justify-center mb-3"
-					>Others</span
-				>
 				<div class="flex items-center justify-center flex-wrap gap-3">
 					<span
 						class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-slate-500 bg-white ring-1 ring-slate-900/10 pointer-events-none"
