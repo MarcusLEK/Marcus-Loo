@@ -69,11 +69,11 @@
 						>
 					</a>
 					<a
-						href="https://drive.google.com/file/d/1xE88OEMRAZXU4hIU8tpLuXj1ZIV_bydz/view?usp=sharing"
+						href="https://drive.google.com/file/d/1Ox8wQp4a7gbYNb7cK1CW6H47rcqGTO7R/view?usp=sharing"
 						target="_blank"
 						class="text-xl text-center text-white font-semibold border-2 rounded-full p-5 cursor-pointer hover:border-goGreen transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-goGreen duration-300"
 					>
-						Download CV
+						Download Resume
 					</a>
 				</div>
 			</div>
