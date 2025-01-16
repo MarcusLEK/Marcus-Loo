@@ -39,6 +39,34 @@
 								>Accea Malaysia - Systems Engineer</a
 							>
 						</div>
+						<div class="block ml-5 mb-10">
+							<ul class="list-disc">
+								<li class="mb-2">
+									Developed and maintained a web order system
+									used internally by staff, ensuring seamless
+									integration with back-end processes to
+									improve efficiency.
+								</li>
+								<li class="mb-2">
+									Designed and implemented features for an
+									express order system, allowing customers to
+									quickly place urgent orders with a smooth
+									user experience.
+								</li>
+								<li class="mb-2">
+									Collaborated with cross-functional teams to
+									troubleshoot and resolve issues, ensuring
+									system reliability and meeting business
+									needs.
+								</li>
+								<li class="mb-2">
+									Assisted other developers working on other
+									systems by providing technical support and
+									integrating enhancements to optimize sales
+									processes.
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -79,18 +107,31 @@
 						<div class="block ml-5 mb-10">
 							<ul class="list-disc">
 								<li class="mb-2">
-									Actively involve in the development of
-									payroll system
+									Contributed to the development and
+									maintenance of a payroll system, employing
+									Test-Driven Development (TDD) to ensure
+									high-quality code and system reliability.
+								</li>
+								<li class="mb-2">
+									Authored a comprehensive, modular user
+									manual integrated within the system to guide
+									customers on efficient usage, improving user
+									adoption and reducing support queries.
+								</li>
+								<li class="mb-2">
+									Actively participated in standups and team
+									meetings, providing valuable suggestions to
+									enhance system functionality and improve
+									workflows.
+								</li>
+								<li class="mb-2">
+									Evaluated project requirements and provided
+									constructive feedback to stakeholders,
+									highlighting potential feasibility issues
+									and proposing alternative solutions.
 								</li>
 							</ul>
 						</div>
-
-						<!-- <div class="text-3xl mb-3">Achievements</div>
-										<div class="block ml-5">
-										<ul class="list-disc">
-											<li class="mb-2">-</li>
-										</ul>
-									</div> -->
 					</div>
 				</div>
 			</div>
@@ -131,16 +172,29 @@
 						<div class="block ml-5 mb-10">
 							<ul class="list-disc">
 								<li class="mb-2">
-									Actively involve in the planning of the
-									project from the sprint planning phase until
-									the deployment phase
+									manage and maintain code while implementing
+									new features and developing new software
+									using laravel and vue.js
 								</li>
 								<li class="mb-2">
-									Maintain, improve and debug existing
-									application built by the company
+									perform frequent code reviews for team
 								</li>
 								<li class="mb-2">
-									Review and merge PR requests
+									perform UI/UX reviews for upcoming projects
+								</li>
+								<li class="mb-2">
+									manage and plan sprint timeline of projects
+								</li>
+								<li class="mb-2">
+									involve in deployment of projects to staging
+									and production with
+								</li>
+								<li class="mb-2">
+									manage and interview potential candidates
+								</li>
+								<li class="mb-2">
+									lead and manage a group of developers for
+									internal product development
 								</li>
 							</ul>
 						</div>
