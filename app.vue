@@ -34,7 +34,7 @@
             '\t\t\t\tits not related to my field. I strongly believe in work culture\n' +
             '\t\t\t\tand team work. I always believe that in tech it is a never\n' +
             '\t\t\t\tending journey of growth and progress.' },
-      { name: 'og:description', content: 'https://marcus-portfolio.vercel.app' },
+      { name: 'og:url', content: 'https://marcus-portfolio.vercel.app' },
       { name: 'og:locale', content: 'en_US' },
       { name: 'og:type', content: 'website' },
     ],
