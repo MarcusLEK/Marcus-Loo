@@ -98,7 +98,7 @@
 					>
 						<div class="text-3xl mb-5">
 							<a
-								href="https://www.accea.com.my"
+								href="https://www.linkedin.com/company/accea-malaysia-sdn-bhd"
 								target="_blank"
 								class="hover:underline"
 								>Accea Malaysia - Systems Engineer</a
