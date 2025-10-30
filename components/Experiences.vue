@@ -36,7 +36,7 @@
                   href="https://tess.gg/"
                   target="_blank"
                   class="hover:underline"
-              >Tess Sdn Bhd</a
+              >Tess Sdn Bhd - Senior Fullstack Developer</a
               >
             </div>
 <!--            <div class="block ml-5 mb-10">-->
