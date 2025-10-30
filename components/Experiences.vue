@@ -6,6 +6,71 @@
 				>MY <span class="text-goGreen ml-2">EXPERIENCES</span></span
 			>
 
+      <div class="grid grid-row-2">
+        <div class="grid grid-cols-12">
+          <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="col-span-1 h-10 w-10 md:col-span-2 md:h-14 md:w-14 text-white bg-goGreen rounded-full p-2 my-auto"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+          >
+            <path
+                fill-rule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                clip-rule="evenodd"
+            />
+          </svg>
+          <div
+              class="col-start-3 col-span-full md:col-span-4 bg-gray-700 rounded-full p-2 md:p-4 text-white text-center my-auto"
+          >
+            <span>Aug 2025 - Present</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-12">
+          <div class="border-l w-1 ml-5 md:ml-7"></div>
+          <div
+              class="col-start-3 col-span-full p-4 text-white text-xl my-auto mb-10"
+          >
+            <div class="text-3xl mb-5">
+              <a
+                  href="https://tess.gg/"
+                  target="_blank"
+                  class="hover:underline"
+              >Tess Sdn Bhd</a
+              >
+            </div>
+<!--            <div class="block ml-5 mb-10">-->
+<!--              <ul class="list-disc">-->
+<!--                <li class="mb-2">-->
+<!--                  Developed and maintained a web order system-->
+<!--                  used internally by staff, ensuring seamless-->
+<!--                  integration with back-end processes to-->
+<!--                  improve efficiency.-->
+<!--                </li>-->
+<!--                <li class="mb-2">-->
+<!--                  Designed and implemented features for an-->
+<!--                  express order system, allowing customers to-->
+<!--                  quickly place urgent orders with a smooth-->
+<!--                  user experience.-->
+<!--                </li>-->
+<!--                <li class="mb-2">-->
+<!--                  Collaborated with cross-functional teams to-->
+<!--                  troubleshoot and resolve issues, ensuring-->
+<!--                  system reliability and meeting business-->
+<!--                  needs.-->
+<!--                </li>-->
+<!--                <li class="mb-2">-->
+<!--                  Assisted other developers working on other-->
+<!--                  systems by providing technical support and-->
+<!--                  integrating enhancements to optimize sales-->
+<!--                  processes.-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </div>-->
+          </div>
+        </div>
+      </div>
+
 			<div class="grid grid-row-2">
 				<div class="grid grid-cols-12">
 					<svg
@@ -23,7 +88,7 @@
 					<div
 						class="col-start-3 col-span-full md:col-span-4 bg-gray-700 rounded-full p-2 md:p-4 text-white text-center my-auto"
 					>
-						<span>Feb 2024 - Present</span>
+						<span>Feb 2024 - Aug 2025</span>
 					</div>
 				</div>
 				<div class="grid grid-cols-12">
@@ -279,3 +344,5 @@
 		</div>
 	</div>
 </template>
+<script setup lang="ts">
+</script>
