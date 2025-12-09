@@ -10,7 +10,7 @@
 				<div class="grid grid-cols-12">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="col-span-1 h-10 w-10 md:col-span-2 md:h-14 md:w-14 text-white bg-goGreen rounded-full p-2 my-auto"
+						class="col-span-1 h-10 w-10 md:col-span-2 md:h-14 md:w-14 text-white bg-gray-700 rounded-full p-2 my-auto"
 						viewBox="0 0 20 20"
 						fill="currentColor"
 					>
@@ -27,7 +27,7 @@
 					</div>
 				</div>
 				<div class="grid grid-cols-12">
-					<div class="border-l w-1 ml-5 md:ml-7"></div>
+					<div class="border-l w-1 ml-5 md:ml-7 bg-gray-700"></div>
 					<div
 						class="col-start-3 col-span-full p-4 text-white text-xl my-auto mb-10"
 					>
@@ -75,7 +75,7 @@
 				<div class="grid grid-cols-12">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="col-span-1 h-10 w-10 md:col-span-2 md:h-14 md:w-14 text-white bg-goGreen rounded-full p-2 my-auto"
+						class="col-span-1 h-10 w-10 md:col-span-2 md:h-14 md:w-14 text-white bg-gray-700 rounded-full p-2 my-auto"
 						viewBox="0 0 20 20"
 						fill="currentColor"
 					>
@@ -92,7 +92,7 @@
 					</div>
 				</div>
 				<div class="grid grid-cols-12">
-					<div class="border-l w-1 ml-5 md:ml-7"></div>
+					<div class="border-l w-1 ml-5 md:ml-7 bg-gray-700"></div>
 					<div
 						class="col-start-3 col-span-full p-4 text-white text-xl my-auto mb-10"
 					>
@@ -140,7 +140,7 @@
 				<div class="grid grid-cols-12">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="col-span-1 h-10 w-10 md:col-span-2 md:h-14 md:w-14 text-white bg-goGreen rounded-full p-2 my-auto"
+						class="col-span-1 h-10 w-10 md:col-span-2 md:h-14 md:w-14 text-white bg-gray-700 rounded-full p-2 my-auto"
 						viewBox="0 0 20 20"
 						fill="currentColor"
 					>
@@ -157,7 +157,7 @@
 					</div>
 				</div>
 				<div class="grid grid-cols-12">
-					<div class="border-l w-1 ml-5 md:ml-7"></div>
+					<div class="border-l w-1 ml-5 md:ml-7 bg-gray-700"></div>
 					<div
 						class="col-start-3 col-span-full p-4 text-white text-xl my-auto mb-10"
 					>
@@ -220,7 +220,7 @@
 				<div class="grid grid-cols-12">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="col-span-1 h-10 w-10 md:col-span-2 md:h-14 md:w-14 text-white bg-goGreen rounded-full p-2 my-auto"
+						class="col-span-1 h-10 w-10 md:col-span-2 md:h-14 md:w-14 text-white bg-gray-700 rounded-full p-2 my-auto"
 						viewBox="0 0 20 20"
 						fill="currentColor"
 					>
@@ -237,7 +237,7 @@
 					</div>
 				</div>
 				<div class="grid grid-cols-12">
-					<div class="border-l w-1 ml-5 md:ml-7"></div>
+					<div class="border-l w-1 ml-5 md:ml-7 bg-gray-700"></div>
 					<div
 						class="col-start-3 col-span-full p-4 text-white text-xl my-auto"
 					>
