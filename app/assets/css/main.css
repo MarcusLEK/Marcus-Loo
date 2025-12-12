@@ -6,3 +6,6 @@
 .text-goGreen {
 	@apply text-white;
 }
+.hover-text-accentColor {
+	color: #1d4ed8;
+}
