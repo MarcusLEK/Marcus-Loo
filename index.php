@@ -25,12 +25,21 @@ $content = [
 						my field. I strongly believe in work culture and team
 						work. I always believe that in tech it is a never ending
 						journey of growth and progress.',
-        'Fast-forward to today, and I\'ve had the privilege of working at an advertising agency, a start-up, and a huge corporation. My main focus these days is building accessible, inclusive products and digital experiences for a variety of clients using robust backend technologies like PHP.'
+        'Fast-forward to today, and I\'ve had the privilege of working at an advertising agency, a start-up, and a huge corporation. My main focus these days is building accessible, inclusive products and digital experiences for a variety of clients using robust backend technologies like PHP.',
+        'When I\'m not at the computer, I\'m usually hanging out with my friends, reading, or playing video games.'
     ],
     'experiences' => [
         'Project Lead & Senior Full Stack Engineer' => [
             'company' => 'Tess Sdn Bhd',
             'duration' => 'August 2025 - Present',
+            'details' => [
+                'Lead the technical planning and execution of internal and external software projects.',
+                'Provide technical leadership in project proposals, assessing feasibility, estimating complexity, and recommending architectural approaches.',
+                'Design and implement scalable full-stack solutions, including backend services, APIs, and frontend interfaces.',
+                'Work closely with stakeholders to refine requirements and optimize system design before development begins.',
+                'Identify opportunities to improve system performance, maintainability, and development workflows.',
+                'Deliver technical support and ongoing improvements for deployed systems.'
+            ],
         ],
         'System Engineer ' => [
             'company' => 'Accea Malaysia',
@@ -85,8 +94,22 @@ $content = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Engineer Portfolio</title>
-    <meta name="description" content="Portfolio of a Web Developer and Software Engineer specializing in PHP.">
+    <!-- Primary Meta Tags -->
+    <title>Marcus Loo | Senior Full Stack Engineer</title>
+    <meta name="title" content="Marcus Loo | Senior Full Stack Engineer">
+    <meta name="description" content="Portfolio of Marcus Loo, a Senior Full Stack Engineer specializing in PHP, Laravel, and Vue.js. Experience in building scalable backend solutions and dynamic web applications.">
+    <meta name="keywords" content="Marcus Loo, Software Engineer, Full Stack Developer, PHP Developer, Laravel, Vue.js, Web Development">
+    <meta name="author" content="Marcus Loo">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Marcus Loo | Senior Full Stack Engineer">
+    <meta property="og:description" content="Portfolio of Marcus Loo, a Senior Full Stack Engineer specializing in PHP, Laravel, and Vue.js. Experience in building scalable backend solutions and dynamic web applications.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Marcus Loo | Senior Full Stack Engineer">
+    <meta property="twitter:description" content="Portfolio of Marcus Loo, a Senior Full Stack Engineer specializing in PHP, Laravel, and Vue.js. Experience in building scalable backend solutions and dynamic web applications.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -228,7 +251,7 @@ $content = [
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0">
                     <a href="#" class="text-2xl font-bold text-white tracking-tighter">
-                        <span class="text-primary">&lt;</span>Dev<span class="text-primary">/&gt;</span>
+                        <span class="text-primary">&lt;</span>Marcus-Loo<span class="text-primary">/&gt;</span>
                     </a>
                 </div>
                 <div class="hidden md:block">
@@ -290,8 +313,8 @@ $content = [
                     I build <span id="typewriter" class="text-secondary border-r-2 border-secondary pr-1"></span>
                 </h2>
                 <p class="max-w-2xl mx-auto text-lg sm:text-xl text-slate-400 mb-10 leading-relaxed">
-                    I'm a web developer specializing in building (and occasionally designing) exceptional digital
-                    experiences. Currently, I'm focused on building scalable backend solutions using PHP.
+                    I'm a Senior Full Stack Engineer specializing in building (and occasionally designing) exceptional digital
+                    experiences. Currently, I'm focused on architecting scalable, full-stack solutions and robust backends using PHP and Laravel.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
                     <a href="#contact"
@@ -327,21 +350,11 @@ $content = [
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6 text-lg text-slate-400 leading-relaxed">
+                    <?php foreach ($content['about'] as $paragraph): ?>
                     <p>
-                        Hello! My name is Marcus and I enjoy creating things that live on the internet. My interest in
-                        web development started back in the day when I decided to try editing custom Tumblr themes —
-                        turns out hacking together HTML & CSS taught me a lot about HTML & CSS!
+                        <?= htmlspecialchars($paragraph) ?>
                     </p>
-                    <p>
-                        Fast-forward to today, and I've had the privilege of working at an advertising agency, a
-                        start-up, and a huge corporation. My main focus these days is building accessible, inclusive
-                        products and digital experiences for a variety of clients using robust backend technologies like
-                        <span class="text-primary font-medium">PHP</span>.
-                    </p>
-                    <p>
-                        When I'm not at the computer, I'm usually hanging out with my friends, reading, or playing video
-                        games.
-                    </p>
+                    <?php endforeach; ?>
                 </div>
                 <div class="relative group mx-auto w-3/4 max-w-md">
                     <div
@@ -374,64 +387,45 @@ $content = [
 
             <div class="relative border-l border-white/10 ml-3 md:ml-6 space-y-12 pb-4">
 
-                <!-- Experience 1 -->
+                <?php
+                $styles = [
+                    ['color' => 'primary', 'shadow' => 'rgba(59,130,246,0.5)'],
+                    ['color' => 'secondary', 'shadow' => 'rgba(139,92,246,0.5)'],
+                    ['color' => 'accent', 'shadow' => 'rgba(16,185,129,0.5)'],
+                ];
+                $i = 0;
+                foreach ($content['experiences'] as $role => $exp):
+                    $style = $styles[$i % count($styles)];
+                    $colorClass = $style['color'];
+                    $shadowColor = $style['shadow'];
+                ?>
                 <div class="relative pl-8 md:pl-0">
                     <div
-                        class="md:hidden absolute w-4 h-4 rounded-full bg-darker border-2 border-primary -left-[9px] top-1">
+                        class="md:hidden absolute w-4 h-4 rounded-full bg-darker border-2 border-<?= $colorClass ?> -left-[9px] top-1">
                     </div>
                     <div class="glass-card hover-glass rounded-2xl p-6 md:p-8 ml-0 md:ml-12 relative group">
                         <div
-                            class="hidden md:block absolute w-4 h-4 rounded-full bg-darker border-2 border-primary -left-[57px] top-8 group-hover:bg-primary transition-colors focus-within:bg-primary shadow-[0_0_10px_rgba(59,130,246,0.5)]">
+                            class="hidden md:block absolute w-4 h-4 rounded-full bg-darker border-2 border-<?= $colorClass ?> -left-[57px] top-8 group-hover:bg-<?= $colorClass ?> transition-colors focus-within:bg-<?= $colorClass ?> shadow-[0_0_10px_<?= $shadowColor ?>]">
                         </div>
-                        <h3 class="text-xl md:text-2xl font-bold text-white mb-1">Senior PHP Developer <span
-                                class="text-primary">@ TechCorp</span></h3>
-                        <p class="text-sm font-mono text-slate-400 mb-4">January 2023 - Present</p>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-1"><?= htmlspecialchars($role) ?> <span
+                                class="text-<?= $colorClass ?>">@ <?= htmlspecialchars($exp['company']) ?></span></h3>
+                        <p class="text-sm font-mono text-slate-400 mb-4"><?= htmlspecialchars($exp['duration']) ?></p>
+                        <?php if (isset($exp['details']) && is_array($exp['details'])): ?>
                         <ul class="space-y-3 text-slate-300">
+                            <?php foreach ($exp['details'] as $detail): ?>
                             <li class="flex items-start">
-                                <span class="text-primary mr-2 mt-1">▹</span>
-                                <div>Architect and implement robust backend services using PHP 8+ and Laravel framework.
-                                </div>
+                                <span class="text-<?= $colorClass ?> mr-2 mt-1">▹</span>
+                                <div><?= htmlspecialchars($detail) ?></div>
                             </li>
-                            <li class="flex items-start">
-                                <span class="text-primary mr-2 mt-1">▹</span>
-                                <div>Write modern, performant, and maintainable code for a diverse array of client and
-                                    internal projects.</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-primary mr-2 mt-1">▹</span>
-                                <div>Work with a variety of different languages, framing, and databases such as MySQL,
-                                    Redis, and JavaScript.</div>
-                            </li>
+                            <?php endforeach; ?>
                         </ul>
+                        <?php endif; ?>
                     </div>
                 </div>
-
-                <!-- Experience 2 -->
-                <div class="relative pl-8 md:pl-0">
-                    <div
-                        class="md:hidden absolute w-4 h-4 rounded-full bg-darker border-2 border-secondary -left-[9px] top-1">
-                    </div>
-                    <div class="glass-card hover-glass rounded-2xl p-6 md:p-8 ml-0 md:ml-12 relative group">
-                        <div
-                            class="hidden md:block absolute w-4 h-4 rounded-full bg-darker border-2 border-secondary -left-[57px] top-8 group-hover:bg-secondary transition-colors focus-within:bg-secondary shadow-[0_0_10px_rgba(139,92,246,0.5)]">
-                        </div>
-                        <h3 class="text-xl md:text-2xl font-bold text-white mb-1">Web Developer <span
-                                class="text-secondary">@ StartUp Inc</span></h3>
-                        <p class="text-sm font-mono text-slate-400 mb-4">July 2020 - December 2022</p>
-                        <ul class="space-y-3 text-slate-300">
-                            <li class="flex items-start">
-                                <span class="text-secondary mr-2 mt-1">▹</span>
-                                <div>Developed and maintained code for in-house and client websites primarily using
-                                    HTML, CSS, Sass, JavaScript, and PHP.</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-secondary mr-2 mt-1">▹</span>
-                                <div>Manually tested sites in various browsers and mobile devices to ensure
-                                    cross-browser compatibility and responsiveness.</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <?php
+                $i++;
+                endforeach;
+                ?>
 
             </div>
         </section>
