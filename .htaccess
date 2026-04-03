@@ -1,0 +1,13 @@
+Options -Indexes
+
+RewriteEngine On
+
+# Serve existing files and directories directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect everything else to 404.php
+RewriteRule ^ 404.php [L]
+
+# Custom error document
+ErrorDocument 404 /Marcus-Loo/404.php

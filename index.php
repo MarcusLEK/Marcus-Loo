@@ -86,6 +86,10 @@ $content = [
             ]
         ],
     ],
+    'contact' => [
+        'email' => 'marcuslooek@gmail.com',
+        'linkedin' => 'https://www.linkedin.com/in/marcus-loo',
+    ]
 ];
 ?>
 <!DOCTYPE html>
@@ -94,22 +98,62 @@ $content = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <!-- Primary Meta Tags -->
     <title>Marcus Loo | Senior Full Stack Engineer</title>
     <meta name="title" content="Marcus Loo | Senior Full Stack Engineer">
-    <meta name="description" content="Portfolio of Marcus Loo, a Senior Full Stack Engineer specializing in PHP, Laravel, and Vue.js. Experience in building scalable backend solutions and dynamic web applications.">
-    <meta name="keywords" content="Marcus Loo, Software Engineer, Full Stack Developer, PHP Developer, Laravel, Vue.js, Web Development">
+    <meta name="description" content="Senior Full Stack Engineer & Project Lead based in Malaysia. Specialising in PHP, Laravel, and Vue.js.">
+    <meta name="keywords" content="Marcus Loo, Senior Full Stack Engineer, Project Lead, PHP Developer, Laravel Developer, Vue.js, Web Development, Malaysia, Software Engineer, Backend Developer">
     <meta name="author" content="Marcus Loo">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://marcusloo.com">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marcusloo.com">
+    <meta property="og:site_name" content="Marcus Loo">
     <meta property="og:title" content="Marcus Loo | Senior Full Stack Engineer">
-    <meta property="og:description" content="Portfolio of Marcus Loo, a Senior Full Stack Engineer specializing in PHP, Laravel, and Vue.js. Experience in building scalable backend solutions and dynamic web applications.">
+    <meta property="og:description" content="Senior Full Stack Engineer & Project Lead based in Malaysia. Specialising in PHP, Laravel, and Vue.js.">
+    <meta property="og:locale" content="en_MY">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Marcus Loo | Senior Full Stack Engineer">
-    <meta property="twitter:description" content="Portfolio of Marcus Loo, a Senior Full Stack Engineer specializing in PHP, Laravel, and Vue.js. Experience in building scalable backend solutions and dynamic web applications.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://marcusloo.com">
+    <meta name="twitter:title" content="Marcus Loo | Senior Full Stack Engineer">
+    <meta name="twitter:description" content="Senior Full Stack Engineer & Project Lead based in Malaysia. Specialising in PHP, Laravel, and Vue.js.">
+    <meta name="twitter:creator" content="@marcusloo">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Marcus Loo",
+        "url": "https://marcusloo.com",
+        "email": "marcuslooek@gmail.com",
+        "jobTitle": "Senior Full Stack Engineer",
+        "description": "Senior Full Stack Engineer and Project Lead specialising in PHP, Laravel, and Vue.js with experience building scalable full-stack web applications.",
+        "sameAs": [
+            "https://www.linkedin.com/in/marcus-loo"
+        ],
+        "knowsAbout": ["PHP", "Laravel", "Vue.js", "Full Stack Development", "Software Architecture", "JavaScript", "Tailwind CSS"],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Tess Sdn Bhd"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Marcus Loo Portfolio",
+        "url": "https://marcusloo.com",
+        "description": "Personal portfolio of Marcus Loo, a Senior Full Stack Engineer based in Malaysia."
+    }
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -330,9 +374,9 @@ $content = [
 
             <!-- Scroll Indicator -->
             <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-                <a href="#about" class="text-slate-400 hover:text-white transition-colors">
+                <a href="#about" class="text-slate-400 hover:text-white transition-colors" aria-label="Scroll down to About section">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                     </svg>
@@ -510,59 +554,27 @@ $content = [
         <!-- Contact Section -->
         <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center reveal">
             <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">Get In Touch</h2>
-            <p class="text-lg text-slate-400 mb-12 max-w-2xl mx-auto">
+            <p class="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
                 Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have
                 a question or just want to say hi, I'll try my best to get back to you!
             </p>
 
-            <div class="glass-card rounded-2xl p-8 max-w-2xl mx-auto shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent">
-                </div>
-
-                <?php if ($formSubmitted): ?>
-                <div
-                    class="bg-green-500/10 border border-green-500/50 text-green-400 p-4 rounded-lg mb-6 flex items-center justify-center gap-3">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+                <a href="mailto:<?= htmlspecialchars($content['contact']['email']) ?>"
+                    class="flex items-center gap-2 px-6 py-3 rounded-full glass-card hover-glass text-slate-300 hover:text-white transition-all duration-300 hover:-translate-y-1">
+                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>
-                    Thanks for reaching out! I'll get back to you soon.
-                </div>
-                <?php
-endif; ?>
-
-                <?php if ($formError): ?>
-                <div class="bg-red-500/10 border border-red-500/50 text-red-400 p-4 rounded-lg mb-6">
-                    Please fill out all fields.
-                </div>
-                <?php
-endif; ?>
-
-                <form action="index.php#contact" method="POST" class="space-y-6 text-left">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Name</label>
-                            <input type="text" id="name" name="name" required
-                                class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                                placeholder="John Doe">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
-                            <input type="email" id="email" name="email" required
-                                class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                                placeholder="john@example.com">
-                        </div>
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
-                        <textarea id="message" name="message" rows="5" required
-                            class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
-                            placeholder="Hello..."></textarea>
-                    </div>
-                    <button type="submit"
-                        class="w-full sm:w-auto px-8 py-3 rounded-lg bg-primary text-white font-medium hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-dark transition-colors transform hover:-translate-y-0.5 duration-300">
-                        Say Hello
-                    </button>
-                </form>
+                    <?= htmlspecialchars($content['contact']['email']) ?>
+                </a>
+                <a href="<?= htmlspecialchars($content['contact']['linkedin']) ?>" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 px-6 py-3 rounded-full glass-card hover-glass text-slate-300 hover:text-white transition-all duration-300 hover:-translate-y-1">
+                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    LinkedIn
+                </a>
             </div>
         </section>
     </main>
