@@ -93,9 +93,10 @@ $content = [
 ];
 ?>
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
 
 <head>
+    <script>(function(){const t=localStorage.getItem('theme');if(t==='light')document.documentElement.classList.remove('dark');else document.documentElement.classList.add('dark');})()</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -148,7 +149,7 @@ $content = [
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "WebSite",
+        "@type": "Website",
         "name": "Marcus Loo Portfolio",
         "url": "https://marcusloo.com",
         "description": "Personal portfolio of Marcus Loo, a Senior Full Stack Engineer based in Malaysia."
@@ -271,6 +272,96 @@ $content = [
             scroll-padding-top: 80px;
             /* Offset for fixed header */
         }
+
+        /* Smooth theme transitions */
+        body, .glass-card, nav, footer, #mobile-menu {
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* ===== LIGHT MODE ===== */
+        html:not(.dark) body {
+            background-color: #f0f4f8 !important;
+            color: #334155;
+        }
+        html:not(.dark) .text-white {
+            color: #0f172a !important;
+        }
+        html:not(.dark) .text-slate-300 {
+            color: #475569 !important;
+        }
+        html:not(.dark) .text-slate-400 {
+            color: #64748b !important;
+        }
+        html:not(.dark) .text-slate-500,
+        html:not(.dark) .text-slate-600 {
+            color: #94a3b8 !important;
+        }
+        html:not(.dark) .bg-darker {
+            background-color: #f0f4f8 !important;
+        }
+        html:not(.dark) .bg-dark {
+            background-color: #e2e8f0 !important;
+        }
+        html:not(.dark) .border-white\/10 {
+            border-color: rgba(15, 23, 42, 0.1) !important;
+        }
+        html:not(.dark) .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        html:not(.dark) .hover-glass:hover {
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.15);
+        }
+        html:not(.dark) nav.scrolled {
+            background: rgba(240, 244, 248, 0.9) !important;
+            border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+        }
+        html:not(.dark) #mobile-menu {
+            background-color: rgba(240, 244, 248, 0.98) !important;
+            border-bottom-color: rgba(15, 23, 42, 0.1);
+        }
+        html:not(.dark) footer {
+            background-color: rgba(226, 232, 240, 0.5) !important;
+            border-top-color: rgba(15, 23, 42, 0.1);
+        }
+        html:not(.dark) .mix-blend-screen {
+            mix-blend-mode: multiply;
+            opacity: 0.08;
+        }
+        html:not(.dark) ::-webkit-scrollbar-track {
+            background: #f0f4f8;
+        }
+        html:not(.dark) ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+        }
+        html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        /* Skill card text in light mode */
+        html:not(.dark) .glass-card span.font-mono {
+            color: #475569;
+        }
+        html:not(.dark) .glass-card:hover span.font-mono {
+            color: #0f172a;
+        }
+        /* Toggle button hover in light mode */
+        html:not(.dark) #theme-toggle:hover,
+        html:not(.dark) #theme-toggle-mobile:hover {
+            color: #0f172a !important;
+            background-color: rgba(15, 23, 42, 0.06) !important;
+        }
+        html:not(.dark) #theme-toggle,
+        html:not(.dark) #theme-toggle-mobile {
+            color: #64748b;
+        }
+        /* About section image placeholder */
+        html:not(.dark) .bg-dark.rounded-lg {
+            background-color: #e2e8f0 !important;
+        }
     </style>
 </head>
 
@@ -309,6 +400,17 @@ $content = [
                         <a href="#contact"
                             class="bg-primary/10 text-primary hover:bg-primary hover:text-white border border-primary/50 transition-all px-4 py-2 rounded-full text-sm font-medium">Contact
                             Me</a>
+                        <button id="theme-toggle" aria-label="Toggle light/dark mode"
+                            class="mt-auto p-2 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50">
+                            <!-- Sun: visible in dark mode (click to go light) -->
+                            <svg class="theme-sun w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                            </svg>
+                            <!-- Moon: visible in light mode (click to go dark) -->
+                            <svg class="theme-moon w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
                 <!-- Mobile menu button -->
@@ -340,6 +442,16 @@ $content = [
                 <a href="#contact"
                     class="hover:bg-white/5 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact
                     Me</a>
+                <button id="theme-toggle-mobile" aria-label="Toggle light/dark mode"
+                    class="flex items-center gap-2 w-full px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-primary hover:bg-white/5 transition-all">
+                    <svg class="theme-sun w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    </svg>
+                    <svg class="theme-moon w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                    </svg>
+                    <span class="theme-label">Switch to Light Mode</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -348,6 +460,7 @@ $content = [
     <main>
         <!-- Hero Section -->
         <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8 relative">
+            <canvas id="particle-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
             <div class="max-w-4xl mx-auto text-center z-10">
                 <p class="text-primary font-mono mb-4 tracking-wide">Hi, my name is</p>
                 <h1 class="text-5xl sm:text-7xl font-bold text-white mb-6 tracking-tight">
@@ -589,6 +702,29 @@ $content = [
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
+            // --- Theme Toggle ---
+            const html = document.documentElement;
+
+            function updateThemeUI() {
+                const isDark = html.classList.contains('dark');
+                document.querySelectorAll('.theme-sun').forEach(el => el.classList.toggle('hidden', !isDark));
+                document.querySelectorAll('.theme-moon').forEach(el => el.classList.toggle('hidden', isDark));
+                document.querySelectorAll('.theme-label').forEach(el => {
+                    el.textContent = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+                });
+            }
+
+            function toggleTheme() {
+                html.classList.toggle('dark');
+                localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+                updateThemeUI();
+            }
+
+            updateThemeUI();
+
+            document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
+            document.getElementById('theme-toggle-mobile')?.addEventListener('click', toggleTheme);
+
             // --- Mobile Menu Toggle ---
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
@@ -688,6 +824,135 @@ $content = [
 
             // Start typing effect slightly after load
             setTimeout(type, 1000);
+
+            // --- Particle Network ---
+            const canvas = document.getElementById('particle-canvas');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                const heroSection = document.getElementById('home');
+                let particles = [];
+                let mouse = { x: null, y: null };
+                const PARTICLE_COUNT = 80;
+                const CONNECTION_DISTANCE = 140;
+                const MOUSE_REPEL_DISTANCE = 100;
+                const COLORS = ['#3b82f6', '#8b5cf6', '#10b981'];
+
+                function resizeCanvas() {
+                    canvas.width = heroSection.offsetWidth;
+                    canvas.height = heroSection.offsetHeight;
+                }
+
+                class Particle {
+                    constructor() {
+                        this.reset(true);
+                    }
+                    reset(initial) {
+                        this.x = Math.random() * canvas.width;
+                        this.y = initial ? Math.random() * canvas.height : (Math.random() > 0.5 ? -5 : canvas.height + 5);
+                        this.vx = (Math.random() - 0.5) * 0.6;
+                        this.vy = (Math.random() - 0.5) * 0.6;
+                        this.radius = Math.random() * 2 + 1;
+                        this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+                        this.alpha = Math.random() * 0.5 + 0.3;
+                    }
+                    update() {
+                        // Mouse repulsion
+                        if (mouse.x !== null) {
+                            const dx = this.x - mouse.x;
+                            const dy = this.y - mouse.y;
+                            const dist = Math.sqrt(dx * dx + dy * dy);
+                            if (dist < MOUSE_REPEL_DISTANCE && dist > 0) {
+                                const force = (MOUSE_REPEL_DISTANCE - dist) / MOUSE_REPEL_DISTANCE;
+                                this.vx += (dx / dist) * force * 0.8;
+                                this.vy += (dy / dist) * force * 0.8;
+                            }
+                        }
+                        // Speed cap
+                        const speed = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
+                        if (speed > 2.5) {
+                            this.vx = (this.vx / speed) * 2.5;
+                            this.vy = (this.vy / speed) * 2.5;
+                        }
+                        // Damping
+                        this.vx *= 0.99;
+                        this.vy *= 0.99;
+                        this.x += this.vx;
+                        this.y += this.vy;
+                        // Wrap around
+                        if (this.x < -10) this.x = canvas.width + 10;
+                        if (this.x > canvas.width + 10) this.x = -10;
+                        if (this.y < -10) this.y = canvas.height + 10;
+                        if (this.y > canvas.height + 10) this.y = -10;
+                    }
+                    draw() {
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                        ctx.fillStyle = this.color;
+                        ctx.globalAlpha = this.alpha;
+                        ctx.fill();
+                        ctx.globalAlpha = 1;
+                    }
+                }
+
+                function initParticles() {
+                    particles = [];
+                    for (let i = 0; i < PARTICLE_COUNT; i++) {
+                        particles.push(new Particle());
+                    }
+                }
+
+                function drawConnections() {
+                    for (let i = 0; i < particles.length; i++) {
+                        for (let j = i + 1; j < particles.length; j++) {
+                            const dx = particles[i].x - particles[j].x;
+                            const dy = particles[i].y - particles[j].y;
+                            const dist = Math.sqrt(dx * dx + dy * dy);
+                            if (dist < CONNECTION_DISTANCE) {
+                                const opacity = (1 - dist / CONNECTION_DISTANCE) * 0.35;
+                                ctx.beginPath();
+                                ctx.moveTo(particles[i].x, particles[i].y);
+                                ctx.lineTo(particles[j].x, particles[j].y);
+                                // Gradient line colour blending both particle colours
+                                const grad = ctx.createLinearGradient(particles[i].x, particles[i].y, particles[j].x, particles[j].y);
+                                grad.addColorStop(0, particles[i].color);
+                                grad.addColorStop(1, particles[j].color);
+                                ctx.strokeStyle = grad;
+                                ctx.globalAlpha = opacity;
+                                ctx.lineWidth = 0.8;
+                                ctx.stroke();
+                                ctx.globalAlpha = 1;
+                            }
+                        }
+                    }
+                }
+
+                function animate() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    particles.forEach(p => { p.update(); p.draw(); });
+                    drawConnections();
+                    requestAnimationFrame(animate);
+                }
+
+                resizeCanvas();
+                initParticles();
+                animate();
+
+                window.addEventListener('resize', () => {
+                    resizeCanvas();
+                    initParticles();
+                });
+
+                heroSection.addEventListener('mousemove', (e) => {
+                    const rect = heroSection.getBoundingClientRect();
+                    mouse.x = e.clientX - rect.left;
+                    mouse.y = e.clientY - rect.top;
+                });
+
+                heroSection.addEventListener('mouseleave', () => {
+                    mouse.x = null;
+                    mouse.y = null;
+                });
+            }
         });
     </script>
 </body>
