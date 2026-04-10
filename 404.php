@@ -5,6 +5,7 @@ http_response_code(404);
 <html lang="en" class="scroll-smooth">
 
 <head>
+    <script>(function(){const t=localStorage.getItem('theme');if(t==='dark')document.documentElement.classList.add('dark');})()</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 — Page Not Found | Marcus Loo</title>
@@ -42,14 +43,53 @@ http_response_code(404);
 
     <style>
         body {
-            background-color: #0f172a;
+            background-color: #f0f4f8;
+            color: #334155;
             font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .dark body {
+            background-color: #0f172a;
+            color: #cbd5e1;
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.75);
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .dark .glass-card {
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: none;
+        }
+
+        h1 {
+            color: #0f172a;
+        }
+
+        .dark h1 {
+            color: #ffffff;
+        }
+
+        .subtitle {
+            color: #64748b;
+        }
+
+        .dark .subtitle {
+            color: #94a3b8;
+        }
+
+        .footer-text {
+            color: #94a3b8;
+        }
+
+        .dark .footer-text {
+            color: #475569;
         }
 
         .blob {
@@ -69,7 +109,7 @@ http_response_code(404);
     </style>
 </head>
 
-<body class="dark text-white min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
+<body class="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
 
     <canvas id="particle-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
 
@@ -81,8 +121,8 @@ http_response_code(404);
         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-t-2xl"></div>
 
         <p class="font-mono text-primary text-6xl font-bold mb-4">404</p>
-        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4">Page Not Found</h1>
-        <p class="text-slate-400 mb-8">
+        <h1 class="text-2xl sm:text-3xl font-bold mb-4">Page Not Found</h1>
+        <p class="subtitle mb-8">
             Looks like this page doesn't exist or has been moved. Head back home and let's start fresh.
         </p>
 
@@ -96,7 +136,7 @@ http_response_code(404);
         </a>
     </div>
 
-    <p class="mt-8 text-slate-600 text-sm font-mono">Marcus Loo &mdash; Senior Full Stack Engineer</p>
+    <p class="footer-text mt-8 text-sm font-mono">Marcus Loo &mdash; Senior Full Stack Engineer</p>
 
     <script>
         const canvas = document.getElementById('particle-canvas');
