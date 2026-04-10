@@ -26,7 +26,7 @@ $content = [
 						work. I always believe that in tech it is a never ending
 						journey of growth and progress.',
         'Fast-forward to today, and I\'ve had the privilege of working at an advertising agency, a start-up, and a huge corporation. My main focus these days is building accessible, inclusive products and digital experiences for a variety of clients using robust backend technologies like PHP.',
-        'When I\'m not at the computer, I\'m usually hanging out with my friends, reading, or playing video games.'
+        'When I\'m not at the computer, I\'m usually hanging out with my friends, reading, or trying out a new hobby.'
     ],
     'experiences' => [
         'Project Lead & Senior Full Stack Engineer' => [
@@ -84,6 +84,18 @@ $content = [
                 'Managing and integrating of Google/Facebook analytics',
                 'Manage and review resumes/cv for QC'
             ]
+        ],
+    ],
+    'projects' => [
+        [
+            'title'       => 'Laravel Base - Development Toolkit',
+            'description' => 'Internal library to accelerate custom software development by eliminating repetitive CRUD and boilerplate.',
+            'key_points'  => ['70–80% faster development', 'Plug-and-play features (CRUD, search, roles, file handling)', 'Model-driven architecture'],
+            'tech'        => ['PHP', 'Laravel', 'MySQL'],
+            'highlight'   => true,
+            'github'      => '',
+            'live'        => '',
+            'url'         => '/projects/laravel-base',
         ],
     ],
     'contact' => [
@@ -397,6 +409,8 @@ $content = [
                             class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Experiences</a>
                         <a href="#skills"
                             class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#projects"
+                            class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Projects</a>
                         <a href="#contact"
                             class="bg-primary/10 text-primary hover:bg-primary hover:text-white border border-primary/50 transition-all px-4 py-2 rounded-full text-sm font-medium">Contact
                             Me</a>
@@ -439,6 +453,8 @@ $content = [
                     class="hover:bg-white/5 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Experiences</a>
                 <a href="#skills"
                     class="hover:bg-white/5 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#projects"
+                    class="hover:bg-white/5 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Projects</a>
                 <a href="#contact"
                     class="hover:bg-white/5 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact
                     Me</a>
@@ -661,6 +677,117 @@ $content = [
                     </div>
                     <span class="font-mono text-sm text-slate-300 group-hover:text-white">Tailwind CSS</span>
                 </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto reveal">
+            <div class="flex items-center justify-end gap-4 mb-16">
+                <div class="h-px bg-white/10 w-full md:w-64"></div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white whitespace-nowrap">Featured Projects<span
+                        class="text-accent font-mono text-xl sm:text-2xl ml-2">.04</span></h2>
+            </div>
+
+            <?php
+            $projectCount = count($content['projects']);
+            if ($projectCount === 1) {
+                $gridClass = 'flex justify-center';
+                $cardClass = 'glass-card hover-glass rounded-2xl p-6 flex flex-col gap-4 group transition-all duration-300 hover:-translate-y-2 relative overflow-hidden w-full max-w-sm';
+            } elseif ($projectCount === 2) {
+                $gridClass = 'grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto';
+                $cardClass = 'glass-card hover-glass rounded-2xl p-6 flex flex-col gap-4 group transition-all duration-300 hover:-translate-y-2 relative overflow-hidden';
+            } else {
+                $gridClass = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+                $cardClass = 'glass-card hover-glass rounded-2xl p-6 flex flex-col gap-4 group transition-all duration-300 hover:-translate-y-2 relative overflow-hidden';
+            }
+            ?>
+            <div class="<?= $gridClass ?>">
+                <?php foreach ($content['projects'] as $project): ?>
+                <div class="<?= $cardClass ?>">
+                    <!-- Top accent bar -->
+                    <div class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary via-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                    <div class="flex items-start justify-between mb-4">
+                        <!-- Folder icon -->
+                        <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+                        </svg>
+                    </div>
+
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors duration-300">
+                            <?= htmlspecialchars($project['title']) ?>
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-3">
+                            <?= htmlspecialchars($project['description']) ?>
+                        </p>
+                        <?php if (!empty($project['key_points'])): ?>
+                        <ul class="space-y-1.5">
+                            <?php foreach ($project['key_points'] as $point): ?>
+                            <li class="flex items-start gap-2 text-sm text-slate-300">
+                                <span class="text-accent shrink-0">▹</span>
+                                <span><?= htmlspecialchars($point) ?></span>
+                            </li>
+                            <?php endforeach; ?>
+                        </ul>
+                        <?php endif; ?>
+                    </div>
+
+                    <!-- Action buttons -->
+                    <?php if (!empty($project['url']) || !empty($project['github']) || !empty($project['live'])): ?>
+                    <div class="flex flex-wrap gap-2 pt-4">
+                        <?php if (!empty($project['url'])): ?>
+                        <a href="<?= htmlspecialchars($project['url']) ?>"
+                            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all duration-200">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            Learn More
+                        </a>
+                        <?php endif; ?>
+                        <?php if (!empty($project['live'])): ?>
+                        <a href="<?= htmlspecialchars($project['live']) ?>" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-accent/10 text-accent border border-accent/20 hover:bg-accent hover:text-white transition-all duration-200">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                            Live Demo
+                        </a>
+                        <?php endif; ?>
+                        <?php if (!empty($project['github'])): ?>
+                        <a href="<?= htmlspecialchars($project['github']) ?>" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-white/5 text-slate-300 border border-white/10 hover:bg-white/10 hover:text-white transition-all duration-200">
+                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.63-5.37-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                        <?php endif; ?>
+                    </div>
+                    <?php endif; ?>
+
+                    <div class="flex flex-wrap gap-2 pt-3 mt-1 border-t border-white/5">
+                        <?php foreach ($project['tech'] as $tag): ?>
+                        <span class="font-mono text-xs text-primary/80 bg-primary/10 px-2 py-1 rounded">
+                            <?= htmlspecialchars($tag) ?>
+                        </span>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="/projects"
+                    class="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-card hover-glass text-slate-300 hover:text-white text-sm font-medium transition-all duration-300 hover:-translate-y-1">
+                    View All Projects
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
             </div>
         </section>
 

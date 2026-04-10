@@ -1,6 +1,9 @@
-Options -Indexes
+Options -Indexes -MultiViews
 
 RewriteEngine On
+
+# Clean URLs for project pages (/projects/foo -> projects/foo.php)
+RewriteRule ^projects/([a-zA-Z0-9_-]+)$ projects/$1.php [L]
 
 # Serve existing files and directories directly
 RewriteCond %{REQUEST_FILENAME} !-f
