@@ -779,14 +779,14 @@ $content = [
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
-                <a href="mailto:<?= htmlspecialchars($content['contact']['email']) ?>"
-                    class="flex items-center gap-2 px-6 py-3 rounded-full glass-card hover-glass text-slate-300 hover:text-white transition-all duration-300 hover:-translate-y-1">
+                <button onclick="copyEmail(this, '<?= htmlspecialchars($content['contact']['email']) ?>')"
+                    class="flex items-center gap-2 px-6 py-3 rounded-full glass-card hover-glass text-slate-300 hover:text-white transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                     <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>
                     <?= htmlspecialchars($content['contact']['email']) ?>
-                </a>
+                </button>
                 <a href="<?= htmlspecialchars($content['contact']['linkedin']) ?>" target="_blank" rel="noopener noreferrer"
                     class="flex items-center gap-2 px-6 py-3 rounded-full glass-card hover-glass text-slate-300 hover:text-white transition-all duration-300 hover:-translate-y-1">
                     <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
@@ -1060,6 +1060,44 @@ $content = [
                 });
             }
         });
+    </script>
+
+    <!-- Email copy toast -->
+    <div id="copy-toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 px-5 py-3 rounded-full text-sm font-mono text-white flex items-center gap-2 shadow-lg pointer-events-none opacity-0 transition-all duration-300 z-50"
+        style="background: rgba(100,255,218,0.15); backdrop-filter: blur(12px); border: 1px solid rgba(100,255,218,0.3);">
+        <svg class="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+        <span style="color: #64ffda;">Email copied to clipboard!</span>
+    </div>
+
+    <script>
+        function copyEmail(btn, email) {
+            function showToast() {
+                const toast = document.getElementById('copy-toast');
+                toast.classList.remove('opacity-0');
+                toast.classList.add('opacity-100');
+                clearTimeout(toast._hideTimer);
+                toast._hideTimer = setTimeout(() => {
+                    toast.classList.remove('opacity-100');
+                    toast.classList.add('opacity-0');
+                }, 2500);
+            }
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(email).then(showToast);
+            } else {
+                const ta = document.createElement('textarea');
+                ta.value = email;
+                ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0';
+                document.body.appendChild(ta);
+                ta.focus();
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                showToast();
+            }
+        }
     </script>
 </body>
 
