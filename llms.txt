@@ -27,7 +27,53 @@ Marcus Loo is a Senior Full Stack Engineer with experience spanning advertising 
 
 ## Projects
 
-- [Laravel Rapid Development Toolkit](/projects/laravel-base): An internal library built on Laravel that eliminates repetitive CRUD boilerplate. Extending a single base model automatically enables auto CRUD generation, file management, import/export, search & filtering, dynamic index views, and roles & permissions. Achieves 70–80% reduction in development time and delivers a customised system in approximately one week. Tech: PHP, Laravel, MySQL.
+### [Laravel Rapid Development Toolkit](/projects/laravel-base)
+
+**Subtitle**: Internal Library — *Eliminate boilerplate. Ship faster. Stay consistent.*
+**Tech**: PHP, Laravel, MySQL
+
+**What it is**: A reusable internal toolkit built on top of Laravel to accelerate the development of custom business applications by eliminating repetitive CRUD implementation and enforcing a consistent architecture across all projects.
+
+**Problem it solves**:
+- CRUD interfaces rebuilt from scratch for every module
+- Manually re-implementing validation, search, and REST APIs
+- Repeated setup for roles, permissions, and file handling
+- Slower delivery timelines due to boilerplate overhead
+- Inconsistent implementations drifting across projects
+- Reduced focus on actual business logic
+
+**Solution**: A base model-driven system where extending a single core class automatically enables a full suite of built-in features. Each entity instantly supports CRUD operations, configurable features, and a consistent structure across the entire application.
+
+**Capabilities**:
+- Auto CRUD Generation — Prebuilt create/read/update/delete flows with override support for custom business logic.
+- File Management — Built-in file upload and storage handling, abstracted away from each module.
+- Import / Export System — Standardised data import and export functionality available out of the box.
+- Search & Filtering — Configurable searchable columns defined directly on the model, no query boilerplate.
+- Dynamic Index Views — Define which fields appear in listing pages via model configuration, not view files.
+- Roles & Permissions — Access control system available out of the box, integrated into every generated route.
+
+**Usage example**:
+```php
+class Product extends BaseModel
+{
+    protected $searchable  = ['name', 'sku'];      // columns that are searchable
+    protected $indexFields = ['name', 'price', 'stock']; // columns shown on index
+    protected $files = ['image'];                  // file columns, auto-stored
+    protected $hasApiResource = true;              // register API routes
+    protected $hasAdminResource = true;            // register Admin routes
+}
+```
+Minimal configuration enables a fully functional CRUD module with search, API endpoints, and UI support.
+
+**Before vs After**:
+- Before: Build CRUD logic for every module individually; manually implement validation, search, and APIs; repeated setup for roles, permissions, and file handling.
+- After: Only implement business-specific logic; core features available instantly via model extension; consistent structure enforced across all modules.
+
+**Impact**:
+- 70–80% reduction in development time
+- ~1 week to deliver a customised system
+- 100% consistent architecture across projects
+- Near-zero repetitive boilerplate per module
 
 ## Contact
 
