@@ -29,7 +29,7 @@ $project = [
         ['icon' => '🔐', 'title' => 'Roles & Permissions',      'desc' => 'Access control system available out of the box, integrated into every generated route.'],
     ],
 
-    'code_example' => "class Product extends BaseModel\n{\n    protected \$searchable  = ['name', 'sku'];\n    protected \$indexFields = ['name', 'price', 'stock'];\n}",
+    'code_example' => "class Product extends BaseModel\n{\n    // columns that are searchable\n    protected \$searchable  = ['name', 'sku'];\n\n    // columns that will be shown on the index\n    protected \$indexFields = ['name', 'price', 'stock'];\n}",
     'code_note'    => 'Minimal configuration enables a fully functional CRUD module with search, API endpoints, and UI support.',
 
     'before' => [
@@ -353,8 +353,8 @@ $project = [
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <?php foreach ($project['problems'] as $problem): ?>
                 <div class="glass-card rounded-xl px-5 py-4 flex items-start gap-3">
-                    <span class="text-red-400 mt-0.5 shrink-0">✕</span>
-                    <span class="text-slate-300 text-sm"><?= htmlspecialchars($problem) ?></span>
+                    <span class="text-red-400 shrink-0">✕</span>
+                    <span class="text-slate-300 text-sm my-auto"><?= htmlspecialchars($problem) ?></span>
                 </div>
                 <?php endforeach; ?>
             </div>
@@ -414,8 +414,8 @@ $project = [
                     <ul class="space-y-3">
                         <?php foreach ($project['before'] as $item): ?>
                         <li class="flex items-start gap-2.5 text-sm text-slate-400">
-                            <span class="text-red-400 mt-0.5 shrink-0">✕</span>
-                            <?= htmlspecialchars($item) ?>
+                            <span class="text-red-400 shrink-0">✕</span>
+                            <span class="my-auto"><?= htmlspecialchars($item) ?></span>
                         </li>
                         <?php endforeach; ?>
                     </ul>
@@ -429,8 +429,8 @@ $project = [
                     <ul class="space-y-3">
                         <?php foreach ($project['after'] as $item): ?>
                         <li class="flex items-start gap-2.5 text-sm text-slate-400">
-                            <span class="text-accent mt-0.5 shrink-0">▹</span>
-                            <?= htmlspecialchars($item) ?>
+                            <span class="text-accent shrink-0">▹</span>
+                            <span class="my-auto"><?= htmlspecialchars($item) ?></span>
                         </li>
                         <?php endforeach; ?>
                     </ul>

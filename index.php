@@ -587,7 +587,7 @@ $content = [
                         <ul class="space-y-3 text-slate-300">
                             <?php foreach ($exp['details'] as $detail): ?>
                             <li class="flex items-start">
-                                <span class="text-<?= $colorClass ?> mr-2 mt-1">▹</span>
+                                <span class="text-<?= $colorClass ?> mr-2">▹</span>
                                 <div><?= htmlspecialchars($detail) ?></div>
                             </li>
                             <?php endforeach; ?>
