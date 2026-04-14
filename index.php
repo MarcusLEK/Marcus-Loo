@@ -92,7 +92,6 @@ $content = [
             'description' => 'Internal library to accelerate custom software development by eliminating repetitive CRUD and boilerplate.',
             'key_points'  => ['70–80% faster development', 'Plug-and-play features (CRUD, search, roles, file handling)', 'Model-driven architecture'],
             'tech'        => ['PHP', 'Laravel', 'MySQL'],
-            'highlight'   => true,
             'github'      => '',
             'live'        => '',
             'url'         => '/projects/laravel-base',

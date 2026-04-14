@@ -29,8 +29,8 @@ $project = [
         ['icon' => '🔐', 'title' => 'Roles & Permissions',      'desc' => 'Access control system available out of the box, integrated into every generated route.'],
     ],
 
-    'code_example' => "class Product extends BaseModel\n{\n    // columns that are searchable\n    protected \$searchable  = ['name', 'sku'];\n\n    // columns that will be shown on the index\n    protected \$indexFields = ['name', 'price', 'stock'];\n}",
-    'code_note'    => 'Minimal configuration enables a fully functional CRUD module with search, API endpoints, and UI support.',
+    'code_example' => "class Product extends BaseModel\n{\n    // columns that are searchable\n    protected \$searchable  = ['name', 'sku'];\n\n    // columns that will be shown on the index\n    protected \$indexFields = ['name', 'price', 'stock'];\n\n    // columns that are files, will automatically store in the set storage\n    protected \$files = ['image'];\n\n    // boolean to indicate if this model should have API routes registered\n    protected \$hasApiResource = true;\n\n    // boolean to indicate if this model should have Admin routes registered\n    protected \$hasAdminResource = true;\n}",
+    'code_note'    => 'Minimal configuration enables a fully functional CRUD module with search, API endpoints, and UI support. Not all features are displayed in this example as this is a private project.',
 
     'before' => [
         'Build CRUD logic for every module individually',
@@ -339,7 +339,7 @@ $project = [
             <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
                 <span class="text-primary font-mono text-base">01.</span> What it is
             </h2>
-            <p class="text-slate-400 leading-relaxed text-lg max-w-3xl">
+            <p class="text-slate-400 leading-relaxed text-lg">
                 <?= htmlspecialchars($project['what']) ?>
             </p>
         </section>
@@ -365,7 +365,7 @@ $project = [
             <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
                 <span class="text-accent font-mono text-base">03.</span> The Solution
             </h2>
-            <p class="text-slate-400 leading-relaxed text-lg max-w-3xl mb-8">
+            <p class="text-slate-400 leading-relaxed text-lg mb-8">
                 <?= htmlspecialchars($project['solution']) ?>
             </p>
 
