@@ -1,0 +1,36 @@
+# Marcus Loo
+
+> Personal portfolio of Marcus Loo — Senior Full Stack Engineer & Project Lead based in Malaysia. Specialises in PHP, Laravel, and Vue.js, with a focus on building scalable, maintainable full-stack web applications.
+
+## About
+
+Marcus Loo is a Senior Full Stack Engineer with experience spanning advertising agencies, start-ups, and large corporations. He is passionate about technology, continuous learning, teamwork, and building accessible, inclusive digital products. His primary stack is PHP-based backend development.
+
+## Experience
+
+- **Project Lead & Senior Full Stack Engineer** — Tess Sdn Bhd (August 2025 – Present): Leads technical planning and execution of internal and external software projects. Designs scalable full-stack solutions including backend services, APIs, and frontend interfaces. Collaborates with stakeholders to refine requirements and optimise system design.
+
+- **System Engineer** — Accea Malaysia (February 2024 – August 2025): Developed and maintained a web order system used internally by staff. Designed features for an express order system for customers. Collaborated cross-functionally to ensure system reliability.
+
+- **Software Developer** — Hitower IT (October 2020 – August 2023): Contributed to a payroll system using Test-Driven Development (TDD). Authored an integrated user manual and participated in stakeholder feedback sessions.
+
+- **Full Stack Developer** — VE Capital Pte. Ltd. (October 2020 – August 2023): Managed and maintained codebase with Laravel and Vue.js. Conducted code reviews, UI/UX reviews, sprint planning, and led a developer team for internal product development.
+
+- **Intern Mobile App Developer** — WOBB / Hiredly (March 2020 – June 2020): Maintained and added features to the WOBB mobile app on Android and iOS. Deployed APKs for alpha testing and managed Google/Facebook analytics integration.
+
+## Skills
+
+- **Languages & Frameworks**: PHP, Laravel, Vue.js, JavaScript, Tailwind CSS
+- **Databases**: MySQL
+- **Practices**: Test-Driven Development (TDD), REST API design, software architecture, code review
+- **Other**: Mobile app development (Android/iOS), project management, sprint planning
+
+## Projects
+
+- [Laravel Rapid Development Toolkit](/projects/laravel-base): An internal library built on Laravel that eliminates repetitive CRUD boilerplate. Extending a single base model automatically enables auto CRUD generation, file management, import/export, search & filtering, dynamic index views, and roles & permissions. Achieves 70–80% reduction in development time and delivers a customised system in approximately one week. Tech: PHP, Laravel, MySQL.
+
+## Contact
+
+- **Email**: marcuslooek@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/marcus-loo
+- **Website**: https://marcusloo.com
