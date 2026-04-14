@@ -615,13 +615,8 @@ $content = [
                 <div
                     class="glass-card hover-glass rounded-xl p-6 flex flex-col items-center justify-center gap-3 group transition-all duration-300 hover:-translate-y-2">
                     <div
-                        class="w-12 h-12 flex items-center justify-center text-4xl group-hover:scale-110 transition-transform text-[#777BB4]">
-                        <svg viewBox="0 0 128 128" width="1em" height="1em">
-                            <path fill="currentColor"
-                                d="M64 4.542l55.82 28.5L88.948 108.411 64 123.458l-24.948-15.047L8.18 33.042z" />
-                            <path fill="#FFF"
-                                d="M64 15.688v98.85l19.5-11.751 25.106-61.914zm0 0L39.394 40.873 64 61.942v15.39l-24.606-21.069L24.894 72.82 64 105.51z" />
-                        </svg>
+                        class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP" class="w-10 h-10" />
                     </div>
                     <span class="font-mono text-sm text-slate-300 group-hover:text-white">PHP</span>
                 </div>
@@ -629,13 +624,8 @@ $content = [
                 <div
                     class="glass-card hover-glass rounded-xl p-6 flex flex-col items-center justify-center gap-3 group transition-all duration-300 hover:-translate-y-2">
                     <div
-                        class="w-12 h-12 flex items-center justify-center text-4xl group-hover:scale-110 transition-transform text-[#FF2D20]">
-                        <svg viewBox="0 0 128 128" width="1em" height="1em">
-                            <path fill="currentColor"
-                                d="M120.301 27.202H67.24a4.348 4.348 0 0 1-4.008-2.65L55.975 7.15A11.724 11.724 0 0 0 45.166 0h-5.918a11.72 11.72 0 0 0-10.81 7.15l-7.257 17.402a4.348 4.348 0 0 1-4.009 2.65H7.699c-3.111 0-5.787 2.05-6.522 5.093l-1.077 4.16c-.352 1.348-.125 2.766.621 3.93A6.878 6.878 0 0 0 6.556 43.19h106.33a5.539 5.539 0 0 0 5.408-4.502l1.6-8.995c.5-2.78-1.577-5.321-4.305-5.321h4.712z" />
-                            <path fill="currentColor"
-                                d="M107.025 50.485c-1.42 0-2.618.995-2.852 2.378l-7.234 42.664a2.915 2.915 0 0 1-2.852 2.381H25.321a2.924 2.924 0 0 1-2.859-2.4l-7.05-42.645c-.24-1.385-1.442-2.378-2.862-2.378s-2.622.993-2.862 2.378l-7.052 42.645A17.518 17.518 0 0 0 19.805 118a17.478 17.478 0 0 0 13.91 10h52.012a17.479 17.479 0 0 0 13.914-10 17.512 17.512 0 0 0 1.259-1.92l5.97-39.73 3.016-23.475a2.895 2.895 0 0 0-2.861-2.39z" />
-                        </svg>
+                        class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel" class="w-10 h-10" />
                     </div>
                     <span class="font-mono text-sm text-slate-300 group-hover:text-white">Laravel</span>
                 </div>
@@ -643,11 +633,8 @@ $content = [
                 <div
                     class="glass-card hover-glass rounded-xl p-6 flex flex-col items-center justify-center gap-3 group transition-all duration-300 hover:-translate-y-2">
                     <div
-                        class="w-12 h-12 flex items-center justify-center text-4xl group-hover:scale-110 transition-transform text-[#4479A1]">
-                        <svg viewBox="0 0 128 128" width="1em" height="1em">
-                            <path fill="currentColor"
-                                d="M112.924 43.915c-3.15-2.903-8.083-4.482-14.71-4.721v-4.596c6.64-.176 11.025-1.8 13.064-4.832 2.677-3.951-1.493-9.52-12.433-16.591L78.694 0v35.39c-2.482 1.353-5.26 2.062-8.293 2.062h-11.83v20.449C65.347 57.9 71.9 57.9 77.106 57.9c13.042 0 24.322 1.956 31.745 5.514 8.783 4.223 13.829 10.155 13.829 16.273 0 14.73-24.623 26.697-55.006 26.697C37.288 106.384 12.668 94.416 12.668 79.687c0-6.19 5.17-12.217 14.126-16.483 8.356-3.955 20.37-5.748 33.914-5.748v24.122c-7.901-.585-15.012-3.125-19.957-7.143-6.126-5.01-6.126-13.111-6.126-17.653 1.836-1.921 7.21-3.613 15.65-4.93V32.48c-12.724 1.341-21.6 3.731-25.545 7.151C3.152 40.959-.513 42.668.058 48.01c.717 6.643 6.94 10.982 16.326 14.331 1.766-.605 3.593-1.159 5.518-1.631v.606h1.232v-.194c2.812-.662 5.759-1.229 8.847-1.684v19.462C11.391 79.488-.13 89.26-.13 100.916 -.13 115.823 30.638 128 67.675 128c37.035 0 60.455-12.176 60.455-27.086 0-11.536-11.233-21.236-31.547-21.236v-6.52c8.89 2.593 14.499 6.273 14.499 10.151 0 5.432-10.74 9.873-24.086 9.873v24.643c22.115-3.376 36.32-9.757 36.32-17.155 0-7.794-15.823-14.437-39.695-17.502h-4.83v-19.98c5.44.025 8.956.025 10.517.025 8.352 0 15.111-1.096 19.349-3.136 5.86-2.825 8.165-6.155 8.165-8.868.01-4.706-5.717-8.086-13.798-10.21z" />
-                        </svg>
+                        class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" class="w-10 h-10" />
                     </div>
                     <span class="font-mono text-sm text-slate-300 group-hover:text-white">MySQL</span>
                 </div>
@@ -655,12 +642,8 @@ $content = [
                 <div
                     class="glass-card hover-glass rounded-xl p-6 flex flex-col items-center justify-center gap-3 group transition-all duration-300 hover:-translate-y-2">
                     <div
-                        class="w-12 h-12 flex items-center justify-center text-4xl group-hover:scale-110 transition-transform text-[#F7DF1E]">
-                        <svg viewBox="0 0 128 128" width="1em" height="1em">
-                            <path fill="currentColor" d="M11.583 14.423h104.83v104.82H11.583z" />
-                            <path fill="#020617"
-                                d="M85.068 95.829c-3.116-2.812-5.064-5.46-5.064-9.617 0-4.004 2.894-6.815 7.185-6.815 4.301 0 6.6 2.016 8.303 5.378l6.8-4.23c-2.616-5.83-8.115-9.143-15.183-9.143-9.973 0-16.793 6.326-16.793 15.939 0 13.923 18.067 11.542 18.067 20.323 0 4.103-3.114 6.915-7.9 6.915-5.228 0-8.917-2.903-11.233-7.514l-7.382 4.103c3.415 6.924 9.4 11.166 18.513 11.166 10.372 0 17.587-5.917 17.587-16.223.003-14.929-18.067-12.046-18.067-20.31M69.043 121.258h-9.59V72.296h9.59z" />
-                        </svg>
+                        class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-10 h-10" />
                     </div>
                     <span class="font-mono text-sm text-slate-300 group-hover:text-white">JavaScript</span>
                 </div>
@@ -668,11 +651,8 @@ $content = [
                 <div
                     class="glass-card hover-glass rounded-xl p-6 flex flex-col items-center justify-center gap-3 group transition-all duration-300 hover:-translate-y-2">
                     <div
-                        class="w-12 h-12 flex items-center justify-center text-4xl group-hover:scale-110 transition-transform text-[#38B2AC]">
-                        <svg viewBox="0 0 128 128" width="1em" height="1em">
-                            <path fill="currentColor"
-                                d="M54.55 1.544c-22.396 0-38.309 6.136-38.309 37.643 0 52.479 66.862 39.066 66.862 87.27H66.604c0-22.316-11.838-23.753-27.425-34.195-2.023-1.353-3.799-2.628-5.322-3.868v18.73A125 125 0 0 0 46.402 128h9.871l-.106-.856s-.11.666-.021-.497a85.2 85.2 0 0 1 20.525-46.733 46 46 0 0 0 12.026-6.42A46.2 46.2 0 0 0 102.756 62.06a44.6 44.6 0 0 0 .584-36.874A45.2 45.2 0 0 0 88.08 6.463 46.1 46.1 0 0 0 69.851.642C64.673.12 59.508 1.565 54.55 1.544M69.57 20.25a25.8 25.8 0 0 1 10.155 3.321A25.4 25.4 0 0 1 88.3 33.155a25 25 0 0 1-.32 20.575 25.6 25.6 0 0 1-7.859 10.231c-3.551 2.651-7.794 4.148-12.091 5.378-4.908 1.4-15.013 1.258-15.013 1.258a43.1 43.1 0 0 1 2.973-19.499c5-11.365 7-19.897 4.125-24.81-2.908-5.015-11.546-5.834-11.546-5.834a50.9 50.9 0 0 1 20.912-.136" />
-                        </svg>
+                        class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="w-10 h-10" />
                     </div>
                     <span class="font-mono text-sm text-slate-300 group-hover:text-white">Tailwind CSS</span>
                 </div>
