@@ -310,6 +310,9 @@ $content = [
         html:not(.dark) .bg-darker {
             background-color: #f0f4f8 !important;
         }
+        html:not(.dark) #skills-carousel .from-darker {
+            --tw-gradient-from: #f0f4f8;
+        }
         html:not(.dark) .bg-dark {
             background-color: #e2e8f0 !important;
         }
@@ -352,6 +355,18 @@ $content = [
         html:not(.dark) ::-webkit-scrollbar-thumb:hover {
             background: #94a3b8;
         }
+        /* AI/simple-icon theme adaptation */
+        .dark .si-icon { filter: invert(1) brightness(1.8); }
+
+        /* Skills marquee */
+        @keyframes marquee-right {
+            0%   { transform: translateX(-50%); }
+            100% { transform: translateX(0%); }
+        }
+        .skills-track {
+            animation: marquee-right 18s linear infinite;
+        }
+
         /* Skill card text in light mode */
         html:not(.dark) .glass-card span.font-mono {
             color: #475569;
@@ -575,22 +590,33 @@ $content = [
                     <div
                         class="md:hidden absolute w-4 h-4 rounded-full bg-darker border-2 border-<?= $colorClass ?> -left-[9px] top-1">
                     </div>
-                    <div class="glass-card hover-glass rounded-2xl p-6 md:p-8 ml-0 md:ml-12 relative group">
+                    <div class="glass-card hover-glass rounded-2xl ml-0 md:ml-12 relative group">
                         <div
                             class="hidden md:block absolute w-4 h-4 rounded-full bg-darker border-2 border-<?= $colorClass ?> -left-[57px] top-8 group-hover:bg-<?= $colorClass ?> transition-colors focus-within:bg-<?= $colorClass ?> shadow-[0_0_10px_<?= $shadowColor ?>]">
                         </div>
-                        <h3 class="text-xl md:text-2xl font-bold text-white mb-1"><?= htmlspecialchars($role) ?> <span
-                                class="text-<?= $colorClass ?>">@ <?= htmlspecialchars($exp['company']) ?></span></h3>
-                        <p class="text-sm font-mono text-slate-400 mb-4"><?= htmlspecialchars($exp['duration']) ?></p>
+                        <button
+                            class="exp-toggle w-full text-left p-6 md:p-8 flex items-start justify-between gap-4 focus:outline-none"
+                            aria-expanded="false">
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-white mb-1"><?= htmlspecialchars($role) ?> <span
+                                        class="text-<?= $colorClass ?>">@ <?= htmlspecialchars($exp['company']) ?></span></h3>
+                                <p class="text-sm font-mono text-slate-400"><?= htmlspecialchars($exp['duration']) ?></p>
+                            </div>
+                            <svg class="exp-chevron w-5 h-5 text-slate-400 shrink-0 mt-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
                         <?php if (isset($exp['details']) && is_array($exp['details'])): ?>
-                        <ul class="space-y-3 text-slate-300">
-                            <?php foreach ($exp['details'] as $detail): ?>
-                            <li class="flex items-start">
-                                <span class="text-<?= $colorClass ?> mr-2">▹</span>
-                                <div><?= htmlspecialchars($detail) ?></div>
-                            </li>
-                            <?php endforeach; ?>
-                        </ul>
+                        <div class="exp-details hidden px-6 md:px-8 pb-6 md:pb-8">
+                            <ul class="space-y-3 text-slate-300 border-t border-white/10 pt-4">
+                                <?php foreach ($exp['details'] as $detail): ?>
+                                <li class="flex items-start">
+                                    <span class="text-<?= $colorClass ?> mr-2">▹</span>
+                                    <div><?= htmlspecialchars($detail) ?></div>
+                                </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -610,51 +636,40 @@ $content = [
                 <div class="h-px bg-white/10 w-full md:w-64"></div>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
-                <!-- Skill Item -->
-                <div
-                    class="glass-card hover-glass rounded-xl p-6 flex flex-col items-center justify-center gap-3 group transition-all duration-300 hover:-translate-y-2">
-                    <div
-                        class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP" class="w-10 h-10" />
-                    </div>
-                    <span class="font-mono text-sm text-slate-300 group-hover:text-white">PHP</span>
-                </div>
+            <?php
+            $skills = [
+                ['icon' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg',              'label' => 'PHP'],
+                ['icon' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg',       'label' => 'Laravel'],
+                ['icon' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg',           'label' => 'MySQL'],
+                ['icon' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg', 'label' => 'JavaScript'],
+                ['icon' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg','label' => 'Tailwind CSS'],
+                ['icon' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg',           'label' => 'Vue.js'],
+                ['icon' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg',           'label' => 'Linux'],
+                ['icon' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg',             'label' => 'Bash',       'si' => true],
+                ['icon' => 'data:image/svg+xml;base64,' . base64_encode('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="#CC785C" d="M164.4 404.5L265.1 348L266.8 343.1L265.1 340.4L260.2 340.4L243.4 339.4L185.9 337.8L136 335.7L87.7 333.1L75.5 330.5L64.1 315.5L65.3 308L75.5 301.1L90.2 302.4C109.1 303.7 136.1 305.5 171.2 308L206.4 310.1L258.6 315.5L266.9 315.5L268.1 312.1L265.3 310L263.1 307.9L212.8 273.8L158.4 237.8L129.9 217.1L114.5 206.6L106.7 196.8L103.3 175.3L117.3 159.9L136.1 161.2L140.9 162.5L159.9 177.2L200.6 208.7L253.7 247.8L261.5 254.3L264.6 252.1L265 250.5L261.5 244.7L232.6 192.5L201.8 139.4L188.1 117.4L184.5 104.2C183.2 98.8 182.3 94.2 182.3 88.7L198.2 67.1L207 64.3L228.2 67.1L237.1 74.9L250.3 105.1L271.7 152.6L304.9 217.2L314.6 236.4L319.8 254.2L321.7 259.6L325.1 259.6L325.1 256.5L327.8 220.1L332.8 175.4L337.7 117.9L339.4 101.7L347.4 82.3L363.3 71.8L375.7 77.7L385.9 92.4L384.5 101.9L378.4 141.4L366.5 203.3L358.7 244.8L363.2 244.8L368.4 239.6L389.4 211.8L424.6 167.7L440.1 150.2L458.2 130.9L469.8 121.7L491.8 121.7L508 145.8L500.7 170.7L478 199.4L459.2 223.8L432.2 260.1L415.4 289.1L417 291.4L421 291L481.9 278L514.8 272.1L554.1 265.4L571.9 273.7L573.8 282.1L566.8 299.3L524.8 309.7L475.6 319.5L402.3 336.8L401.4 337.5L402.4 338.8L435.4 341.9L449.5 342.7L484.1 342.7L548.5 347.5L565.3 358.6L575.4 372.2L573.7 382.6L547.8 395.8C532.3 392.1 493.4 382.9 431.2 368.1L403.2 361.1L399.3 361.1L399.3 363.4L422.6 386.2L465.3 424.8L518.8 474.6L521.5 486.9L514.6 496.6L507.3 495.6L460.3 460.2L442.2 444.3L401.1 409.7L398.4 409.7L398.4 413.3L407.9 427.2L457.9 502.4L460.5 525.4L456.9 532.9L443.9 537.4L429.7 534.8L400.4 493.7L370.2 447.4L345.8 405.9L342.8 407.6L328.4 562.4L321.7 570.3L306.2 576.2L293.2 566.4L286.3 550.5L293.2 519L301.5 477.9L308.2 445.2L314.3 404.6L317.9 391.1L317.7 390.2L314.7 390.6L284.1 432.6L237.6 495.5L200.8 534.9L192 538.4L176.7 530.5L178.1 516.4L186.6 503.8L237.5 439L268.2 398.8L288 375.6L287.9 372.2L286.7 372.2L151.4 460L127.3 463.1L116.9 453.4L118.2 437.5L123.1 432.3L163.8 404.3L163.7 404.4L163.7 404.5z"/></svg>'), 'label' => 'Claude'],
+                ['icon' => 'https://cdn.simpleicons.org/googlegemini',                                                     'label' => 'Gemini',     'si' => true],
+                ['icon' => 'data:image/svg+xml;base64,' . base64_encode('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M260.4 249.8L260.4 201.2C260.4 197.1 261.9 194 265.5 192L363.3 135.7C376.6 128 392.5 124.4 408.9 124.4C470.3 124.4 509.3 172 509.3 222.7C509.3 226.3 509.3 230.4 508.8 234.5L407.3 175.1C401.2 171.5 395 171.5 388.9 175.1L260.4 249.8zM488.7 439.2L488.7 323C488.7 315.8 485.6 310.7 479.5 307.1L351 232.4L393 208.3C396.6 206.3 399.7 206.3 403.2 208.3L501 264.7C529.2 281.1 548.1 315.9 548.1 349.7C548.1 388.6 525.1 424.5 488.7 439.3L488.7 439.3zM230.2 336.8L188.2 312.2C184.6 310.2 183.1 307.1 183.1 303L183.1 190.4C183.1 135.6 225.1 94.1 281.9 94.1C303.4 94.1 323.4 101.3 340.3 114.1L239.4 172.5C233.3 176.1 230.2 181.2 230.2 188.4L230.2 336.9L230.2 336.9zM320.6 389L260.4 355.2L260.4 283.5L320.6 249.7L380.8 283.5L380.8 355.2L320.6 389zM359.3 544.7C337.8 544.7 317.8 537.5 300.9 524.7L401.8 466.3C407.9 462.7 411 457.6 411 450.4L411 301.9L453.5 326.5C457.1 328.5 458.6 331.6 458.6 335.7L458.6 448.3C458.6 503.1 416.1 544.6 359.3 544.6L359.3 544.6zM237.8 430.5L140.1 374.2C111.9 357.8 93 323 93 289.2C93 249.8 116.6 214.4 152.9 199.6L152.9 316.3C152.9 323.5 156 328.6 162.1 332.2L290.1 406.4L248.1 430.5C244.5 432.5 241.4 432.5 237.9 430.5zM232.2 514.5C174.3 514.5 131.8 471 131.8 417.2C131.8 413.1 132.3 409 132.8 404.9L233.7 463.3C239.8 466.9 246 466.9 252.1 463.3L380.6 389.1L380.6 437.7C380.6 441.8 379.1 444.9 375.5 446.9L277.7 503.2C264.4 510.9 248.5 514.5 232.1 514.5L232.1 514.5zM359.2 575.4C421.2 575.4 472.9 531.4 484.6 473C541.9 458.1 578.8 404.4 578.8 349.6C578.8 313.8 563.4 278.9 535.8 253.9C538.4 243.1 539.9 232.4 539.9 221.6C539.9 148.4 480.5 93.6 411.9 93.6C398.1 93.6 384.8 95.6 371.5 100.3C348.5 77.8 316.7 63.4 281.9 63.4C219.9 63.4 168.2 107.4 156.5 165.8C99.2 180.6 62.3 234.4 62.3 289.2C62.3 325 77.7 359.9 105.3 384.9C102.7 395.7 101.2 406.4 101.2 417.2C101.2 490.4 160.6 545.2 229.2 545.2C243 545.2 256.3 543.2 269.6 538.5C292.6 561 324.4 575.4 359.2 575.4z"/></svg>'), 'label' => 'OpenAI',     'si' => true],
+            ];
 
-                <div
-                    class="glass-card hover-glass rounded-xl p-6 flex flex-col items-center justify-center gap-3 group transition-all duration-300 hover:-translate-y-2">
-                    <div
-                        class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel" class="w-10 h-10" />
-                    </div>
-                    <span class="font-mono text-sm text-slate-300 group-hover:text-white">Laravel</span>
-                </div>
+            $skillCard = function($skill) {
+                $imgClass = 'w-10 h-10' . (!empty($skill['si']) ? ' si-icon' : '');
+                return '<div class="glass-card hover-glass rounded-xl p-6 flex flex-col items-center justify-center gap-3 group transition-all duration-300 shrink-0 w-36">'
+                    . '<div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">'
+                    . '<img src="' . htmlspecialchars($skill['icon']) . '" alt="' . htmlspecialchars($skill['label']) . '" class="' . $imgClass . '" />'
+                    . '</div>'
+                    . '<span class="font-mono text-sm text-slate-300 group-hover:text-white">' . htmlspecialchars($skill['label']) . '</span>'
+                    . '</div>';
+            };
+            ?>
 
-                <div
-                    class="glass-card hover-glass rounded-xl p-6 flex flex-col items-center justify-center gap-3 group transition-all duration-300 hover:-translate-y-2">
-                    <div
-                        class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" class="w-10 h-10" />
-                    </div>
-                    <span class="font-mono text-sm text-slate-300 group-hover:text-white">MySQL</span>
-                </div>
+            <div class="overflow-hidden relative" id="skills-carousel">
+                <!-- fade edges -->
+                <div class="pointer-events-none absolute inset-y-0 left-0 w-16 z-10 bg-gradient-to-r from-darker to-transparent"></div>
+                <div class="pointer-events-none absolute inset-y-0 right-0 w-16 z-10 bg-gradient-to-l from-darker to-transparent"></div>
 
-                <div
-                    class="glass-card hover-glass rounded-xl p-6 flex flex-col items-center justify-center gap-3 group transition-all duration-300 hover:-translate-y-2">
-                    <div
-                        class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-10 h-10" />
-                    </div>
-                    <span class="font-mono text-sm text-slate-300 group-hover:text-white">JavaScript</span>
-                </div>
-
-                <div
-                    class="glass-card hover-glass rounded-xl p-6 flex flex-col items-center justify-center gap-3 group transition-all duration-300 hover:-translate-y-2">
-                    <div
-                        class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="w-10 h-10" />
-                    </div>
-                    <span class="font-mono text-sm text-slate-300 group-hover:text-white">Tailwind CSS</span>
+                <div class="skills-track flex gap-6 w-max" id="skills-track">
+                    <?php foreach ($skills as $skill) echo $skillCard($skill); ?>
+                    <?php foreach ($skills as $skill) echo $skillCard($skill); ?>
                 </div>
             </div>
         </section>
@@ -830,6 +845,18 @@ $content = [
 
             document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
             document.getElementById('theme-toggle-mobile')?.addEventListener('click', toggleTheme);
+
+            // --- Experience Card Collapse ---
+            document.querySelectorAll('.exp-toggle').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const details = btn.nextElementSibling;
+                    const chevron = btn.querySelector('.exp-chevron');
+                    const expanded = btn.getAttribute('aria-expanded') === 'true';
+                    btn.setAttribute('aria-expanded', String(!expanded));
+                    details.classList.toggle('hidden', expanded);
+                    chevron.classList.toggle('rotate-180', !expanded);
+                });
+            });
 
             // --- Mobile Menu Toggle ---
             const btn = document.getElementById('mobile-menu-btn');
