@@ -2,6 +2,12 @@ Options -Indexes -MultiViews
 
 RewriteEngine On
 
+# Shared partials are includes, never routes.
+RewriteRule ^inc/ - [F,L]
+
+# Sitemap is generated from inc/content.php so it never goes stale.
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
 # Clean URLs for project pages (/projects/foo -> projects/foo.php)
 RewriteRule ^projects/([a-zA-Z0-9_-]+)$ projects/$1.php [L]
 

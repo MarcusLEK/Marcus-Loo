@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    width:1200px; height:630px; overflow:hidden;
+    background:#0b0b0c; color:#eff0f2;
+    font-family:"Inter Tight",sans-serif;
+    display:flex; flex-direction:column; justify-content:space-between;
+    padding:64px 72px; position:relative;
+  }
+  body::before {
+    content:""; position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size:64px 64px;
+    mask-image:radial-gradient(ellipse 90% 70% at 20% 0%, #000 10%, transparent 80%);
+  }
+  .top, .mid, .bot { position:relative; }
+  .brand { display:flex; align-items:center; gap:12px; font-family:"JetBrains Mono",monospace; font-size:22px; font-weight:700; }
+  .mark { width:12px; height:26px; background:#c6ff3d; }
+  .slash { color:#6c6d78; font-weight:400; }
+  .kicker { display:flex; align-items:center; gap:14px; color:#c6ff3d; font-family:"JetBrains Mono",monospace; font-size:20px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:22px; }
+  .kicker::before { content:""; width:44px; height:2px; background:#c6ff3d; }
+  h1 { font-size:104px; font-weight:700; letter-spacing:-.045em; line-height:1; margin-bottom:24px; }
+  .build { display:flex; align-items:center; gap:16px; font-family:"JetBrains Mono",monospace; font-size:42px; font-weight:400; }
+  .build-kw { color:#a5a6b0; }
+  .build-hi { color:#c6ff3d; font-weight:700; }
+  .caret { display:inline-block; width:16px; height:46px; background:#c6ff3d; }
+  .bot { display:flex; align-items:center; justify-content:space-between; }
+  .chips { display:flex; gap:10px; }
+  .chip { padding:8px 14px; border:1px solid #26262d; background:#16161a; color:#a5a6b0; font-family:"JetBrains Mono",monospace; font-size:19px; }
+  .chip.hi { border-color:rgba(198,255,61,.35); background:rgba(198,255,61,.1); color:#c6ff3d; }
+  .url { color:#6c6d78; font-family:"JetBrains Mono",monospace; font-size:20px; }
+</style>
+</head>
+<body>
+  <div class="top">
+    <div class="brand"><span class="mark"></span>marcus<span class="slash">-</span>loo</div>
+  </div>
+
+  <div class="mid">
+    <div class="kicker">Senior Full Stack Engineer</div>
+    <h1>Marcus Loo</h1>
+    <p class="build"><span class="build-kw">I build</span> <span class="build-hi">scalable backends.</span><span class="caret"></span></p>
+  </div>
+
+  <div class="bot">
+    <div class="chips">
+      <span class="chip hi">PHP</span>
+      <span class="chip hi">Laravel</span>
+      <span class="chip">Vue.js</span>
+      <span class="chip">MySQL</span>
+    </div>
+    <span class="url">marcusloo.com</span>
+  </div>
+</body>
+</html>
